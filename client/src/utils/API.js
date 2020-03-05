@@ -1,7 +1,11 @@
 import axios from 'axios';
 
 export default{
-  search: function(query) {
-    return axios.get()
-  }
+  // showAll: function(query) {
+  //   return axios.get()
+  // }
+
+  // search: function(query) {
+  //   return axios.get()
+  // }
 };

@@ -13,10 +13,10 @@ function App() {
           <Route exact path='/'>
             <HomePage />
           </Route>
-          <Route exact path='/bid'>
+          <Route exact path='/BidPost'>
             <BidPost />
           </Route>
-          <Route exact path='/post'>
+          <Route exact path='/PostPage'>
             <PostPage />
           </Route>
         </Switch>
