@@ -1,24 +1,28 @@
-import React, { Component } from 'react';
-import BidPost from './BidPost';
+import React, { Component } from "react";
+import BidPost from "./BidPost";
 
 class PostPage extends Component {
-
-
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="itemName">Enter Item Name</label>
-        <input id="itemName" name="itemName" type="text" />
-
-        <label htmlFor="startPrice">Starting Price</label>
-        <input id="startPrice" name="startPrice" type="startPrice" />
-
-        <label htmlFor="img">Upload an Image</label>
-        <input id="img" name="img" type="text" />
-
-        <button>Post Item!</button>
-      </form>
+      <div className="container">
+        <div className="card">
+          <form onSubmit={this.handleSubmit}>
+            <div>
+              <label htmlFor="itemName">Enter Item Name</label>
+              <input id="itemName" name="itemName" type="text" />
+            </div>
+            <div>
+              <label htmlFor="startPrice">Starting Price</label>
+              <input id="startPrice" name="startPrice" type="startPrice" />
+            </div>
+            <div>
+              <label htmlFor="img">Upload an Image</label>
+              <input id="img" name="img" type="text" />
+            </div>
+            <button className="postButton btn">Post Item!</button>
+          </form>
+        </div>
+      </div>
     );
   }
 }
