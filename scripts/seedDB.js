@@ -13,7 +13,7 @@ mongoose.connect(
       // Home and garden
       {
           _id: 1,
-          image: "/client/src/assets/images/home1.jpg",
+          image: "/images/home1.jpg",
           itemname: "Laundry mashine",
           startingbid: 200,
           buyout: 500,
@@ -22,7 +22,7 @@ mongoose.connect(
       },
       {
         _id: 2,
-        image: "/client/src/assets/images/home2.jpg",
+        image: "/images/home2.jpg",
         itemname: "Massage chair",
         startingbid: 500,
         buyout: 1500,
@@ -31,7 +31,7 @@ mongoose.connect(
     },
     {
         _id: 3,
-        image: "/client/src/assets/images/home3.jpg",
+        image: "/images/home3.jpg",
         itemname: "Gas stove",
         startingbid: 800,
         buyout: 2000,
@@ -40,8 +40,8 @@ mongoose.connect(
     },
     {
         _id: 4,
-        image: "/client/src/assets/images/home4.jpg",
-        itemname: "Fridge",
+        image: "/images/home4.jpg",
+        itemname: "Coffee mashine",
         startingbid: 300,
         buyout: 600,
         category: "homeAndGarden",
@@ -49,7 +49,7 @@ mongoose.connect(
     },
     {
         _id: 5,
-        image: "/client/src/assets/images/home5.jpg",
+        image: "/images/home5.jpg",
         itemname: "Patio set",
         startingbid: 40,
         buyout: 100,
@@ -58,7 +58,7 @@ mongoose.connect(
     },
     {
         _id: 6,
-        image: "/client/src/assets/images/home6.jpg",
+        image: "/images/home6.jpg",
         itemname: "Lawn mashine",
         startingbid: 600,
         buyout: 1000,
@@ -67,7 +67,7 @@ mongoose.connect(
     },
     {
         _id: 7,
-        image: "/client/src/assets/images/home7.jpg",
+        image: "/images/home7.jpg",
         itemname: "Couch",
         startingbid: 100,
         buyout: 250,
@@ -76,7 +76,7 @@ mongoose.connect(
     },
     {
         _id: 8,
-        image: "/client/src/assets/images/home8.jpg",
+        image: "/images/home8.jpg",
         itemname: "Dining set",
         startingbid: 50,
         buyout: 120,
@@ -86,7 +86,7 @@ mongoose.connect(
     // Electronics
     {
         _id: 9,
-        image: "/client/src/assets/images/electronics1.jpg",
+        image: "/images/electronics1.jpg",
         itemname: "Iphone 10",
         startingbid: 300,
         buyout: 650,
@@ -95,7 +95,7 @@ mongoose.connect(
     },
     {
         _id: 10,
-        image: "/client/src/assets/images/electronics2.jpg",
+        image: "/images/electronics2.jpg",
         itemname: "Lenovo laptop",
         startingbid: 500,
         buyout: 1100,
@@ -104,7 +104,7 @@ mongoose.connect(
     },
     {
         _id: 11,
-        image: "/client/src/assets/images/electronics3.jpg",
+        image: "/images/electronics3.jpg",
         itemname: "Apple tablet",
         startingbid: 150,
         buyout: 400,
@@ -113,7 +113,7 @@ mongoose.connect(
     },
     {
         _id: 12,
-        image: "/client/src/assets/images/electronics4.jpg",
+        image: "/images/electronics4.jpg",
         itemname: "LG Smart TV",
         startingbid: 550,
         buyout: 1000,
@@ -122,7 +122,7 @@ mongoose.connect(
     },
     {
         _id: 13,
-        image: "/client/src/assets/images/electronics5.jpg",
+        image: "/images/electronics5.jpg",
         itemname: "Patio Set",
         startingbid: 30,
         buyout: 75,
@@ -131,7 +131,7 @@ mongoose.connect(
     },
     {
         _id: 14,
-        image: "/client/src/assets/images/electronics6.jpg",
+        image: "/images/electronics6.jpg",
         itemname: "Lawn Mashine",
         startingbid: 600,
         buyout: 1100,
@@ -140,7 +140,7 @@ mongoose.connect(
     },
     {
         _id: 15,
-        image: "/client/src/assets/images/electronics7.jpg",
+        image: "/images/electronics7.jpg",
         itemname: "Vacuum Cleaner",
         startingbid: 85,
         buyout: 250,
@@ -149,7 +149,7 @@ mongoose.connect(
     },
     {
         _id: 16,
-        image: "/client/src/assets/images/electronics8.jpg",
+        image: "/images/electronics8.jpg",
         itemname: "Blender",
         startingbid: 30,
         buyout: 90,
@@ -159,7 +159,7 @@ mongoose.connect(
 // Fashion
     {
         _id: 17,
-        image: "/client/src/assets/images/fashion1.jpg",
+        image: "/images/fashion1.jpg",
         itemname: "DW women's watch",
         startingbid: 50,
         buyout: 125,
@@ -168,7 +168,7 @@ mongoose.connect(
     },
     {
         _id: 18,
-        image: "/client/src/assets/images/fashion2.jpg",
+        image: "/images/fashion2.jpg",
         itemname: "Cartier ring",
         startingbid: 600,
         buyout: 1250,
@@ -177,7 +177,7 @@ mongoose.connect(
     },
     {
         _id: 19,
-        image: "/client/src/assets/images/fashion3.jpg",
+        image: "/images/fashion3.jpg",
         itemname: "Burberry women's scarf",
         startingbid: 160,
         buyout: 275,
@@ -186,7 +186,7 @@ mongoose.connect(
     },
     {
         _id: 20,
-        image: "/client/src/assets/images/fashion4.jpg",
+        image: "/images/fashion4.jpg",
         itemname: "Gucci women's bag",
         startingbid: 800,
         buyout: 1400,
@@ -195,7 +195,7 @@ mongoose.connect(
     },
     {
         _id: 21,
-        image: "/client/src/assets/images/fashion5.jpg",
+        image: "/images/fashion5.jpg",
         itemname: "Women's coat",
         startingbid: 80,
         buyout: 190,
@@ -204,7 +204,7 @@ mongoose.connect(
     },
     {
         _id: 22,
-        image: "/client/src/assets/images/fashion6.jpg",
+        image: "/images/fashion6.jpg",
         itemname: "Men's bracelet",
         startingbid: 300,
         buyout: 500,
@@ -213,7 +213,7 @@ mongoose.connect(
     },
     {
         _id: 23,
-        image: "/client/src/assets/images/fashion7.jpg",
+        image: "/images/fashion7.jpg",
         itemname: "Men's bag",
         startingbid: 180,
         buyout: 260,
@@ -222,7 +222,7 @@ mongoose.connect(
     },
     {
         _id: 24,
-        image: "/client/src/assets/images/fashion8.jpg",
+        image: "/images/fashion8.jpg",
         itemname: "Men's coat",
         startingbid: 60,
         buyout: 140,
@@ -232,7 +232,7 @@ mongoose.connect(
     // Sporting goods
     {
         _id: 25,
-        image: "/client/src/assets/images/sport1.jpg",
+        image: "/images/sport1.jpg",
         itemname: "Bicycle",
         startingbid: 1500,
         buyout: 2500,
@@ -241,7 +241,7 @@ mongoose.connect(
     },
     {
         _id: 26,
-        image: "/client/src/assets/images/sport2.jpg",
+        image: "/images/sport2.jpg",
         itemname: "Boxing gloves",
         startingbid: 40,
         buyout: 95,
@@ -250,7 +250,7 @@ mongoose.connect(
     },
     {
         _id: 27,
-        image: "/client/src/assets/images/sport3.jpg",
+        image: "/images/sport3.jpg",
         itemname: "American football ball",
         startingbid: 30,
         buyout: 80,
@@ -259,7 +259,7 @@ mongoose.connect(
     },
     {
         _id: 28,
-        image: "/client/src/assets/images/sport4.jpg",
+        image: "/images/sport4.jpg",
         itemname: "Snowboard",
         startingbid: 200,
         buyout: 450,
@@ -268,7 +268,7 @@ mongoose.connect(
     },
     {
         _id: 29,
-        image: "/client/src/assets/images/sport5.jpg",
+        image: "/images/sport5.jpg",
         itemname: "Sports bag",
         startingbid: 60,
         buyout: 115,
@@ -277,7 +277,7 @@ mongoose.connect(
     },
     {
         _id: 30,
-        image: "/client/src/assets/images/sport6.jpg",
+        image: "/images/sport6.jpg",
         itemname: "Golf set",
         startingbid: 200,
         buyout: 450,
@@ -286,7 +286,7 @@ mongoose.connect(
     },
     {
         _id: 31,
-        image: "/client/src/assets/images/sport7.jpg",
+        image: "/images/sport7.jpg",
         itemname: "Skiing suit",
         startingbid: 80,
         buyout: 150,
@@ -295,7 +295,7 @@ mongoose.connect(
     },
     {
         _id: 32,
-        image: "/client/src/assets/images/sport8.jpg",
+        image: "/images/sport8.jpg",
         itemname: "Sports glasses",
         startingbid: 60,
         buyout: 200,
@@ -305,7 +305,7 @@ mongoose.connect(
    // businessIndustrial
    {
     _id: 33,
-    image: "/client/src/assets/images/business1.jpg",
+    image: "/images/business1.jpg",
     itemname: "Printer",
     startingbid: 80,
     buyout: 200,
@@ -314,7 +314,7 @@ mongoose.connect(
 },
 {
     _id: 34,
-    image: "/client/src/assets/images/business2.jpg",
+    image: "/images/business2.jpg",
     itemname: "Office desk",
     startingbid: 150,
     buyout: 300,
@@ -323,7 +323,7 @@ mongoose.connect(
 },
 {
     _id: 35,
-    image: "/client/src/assets/images/business3.jpg",
+    image: "/images/business3.jpg",
     itemname: "Sustainable moving boxes",
     startingbid: 400,
     buyout: 950,
@@ -332,7 +332,7 @@ mongoose.connect(
 },
 {
     _id: 36,
-    image: "/client/src/assets/images/business4.jpg",
+    image: "/images/business4.jpg",
     itemname: "Cash register",
     startingbid: 2000,
     buyout: 3000,
@@ -341,7 +341,7 @@ mongoose.connect(
 },
 {
     _id: 37,
-    image: "/client/src/assets/images/business5.jpg",
+    image: "/images/business5.jpg",
     itemname: "Lock safe",
     startingbid: 1300,
     buyout: 1800,
@@ -350,7 +350,7 @@ mongoose.connect(
 },
 {
     _id: 38,
-    image: "/client/src/assets/images/business6.jpg",
+    image: "/images/business6.jpg",
     itemname: "Finger printer",
     startingbid: 1200,
     buyout: 2500,
@@ -359,7 +359,7 @@ mongoose.connect(
 },
 {
     _id: 39,
-    image: "/client/src/assets/images/business7.jpg",
+    image: "/images/business7.jpg",
     itemname: "Payment mashine",
     startingbid: 900,
     buyout: 1600,
@@ -368,7 +368,7 @@ mongoose.connect(
 },
 {
     _id: 40,
-    image: "/client/src/assets/images/business8.jpg",
+    image: "/images/business8.jpg",
     itemname: "Shredder",
     startingbid: 400,
     buyout: 600,
