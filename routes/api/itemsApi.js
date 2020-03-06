@@ -12,7 +12,7 @@ router.route("/")
 router
  .route("/:id")
  .get(itemController.findById)
- .purge(itemController.update)
+ .update(itemController.update)
  .delete(itemController.remove);
 
  module.exports = router;
