@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Navbar from "../components/Navbar/index"
 
 class Bid extends Component {
   constructor(props) {
@@ -55,6 +56,7 @@ class Bid extends Component {
   render() {
     return (
       <div className="container">
+        <Navbar />
         <div className="jumbotron jumbotron-fluid">
           <div className="container">
             <h1 className="display-4">Bid on Item</h1>

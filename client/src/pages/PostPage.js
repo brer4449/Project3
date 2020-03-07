@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import BidPost from "./BidPost";
+import Navbar from "../components/Navbar/index";
 
 class PostPage extends Component {
   render() {
     return (
       <div className="container">
+        <Navbar />
         <div className="card">
           <form onSubmit={this.handleSubmit}>
             <div>
