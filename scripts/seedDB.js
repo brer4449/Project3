@@ -54,7 +54,7 @@ mongoose.connect(
         startingbid: 40,
         buyout: 100,
         category: "homeAndGarden",
-        condition: "Bad"
+        condition: "Used"
     },
     {
         _id: 6,
@@ -81,7 +81,7 @@ mongoose.connect(
         startingbid: 50,
         buyout: 120,
         category: "homeAndGarden",
-        condition: "Bad"
+        condition: "Used"
     },
     // Electronics
     {
@@ -118,12 +118,12 @@ mongoose.connect(
         startingbid: 550,
         buyout: 1000,
         category: "electronics",
-        condition: "new"
+        condition: "New"
     },
     {
         _id: 13,
         image: "/images/electronics5.jpg",
-        itemname: "Patio Set",
+        itemname: "Speakers",
         startingbid: 30,
         buyout: 75,
         category: "electronics",
@@ -132,7 +132,7 @@ mongoose.connect(
     {
         _id: 14,
         image: "/images/electronics6.jpg",
-        itemname: "Lawn Mashine",
+        itemname: "Robotic vacuum",
         startingbid: 600,
         buyout: 1100,
         category: "electronics",
@@ -160,7 +160,7 @@ mongoose.connect(
     {
         _id: 17,
         image: "/images/fashion1.jpg",
-        itemname: "DW women's watch",
+        itemname: "Movado women's watch",
         startingbid: 50,
         buyout: 125,
         category: "fashion",
@@ -169,7 +169,7 @@ mongoose.connect(
     {
         _id: 18,
         image: "/images/fashion2.jpg",
-        itemname: "Cartier ring",
+        itemname: "Women's ring",
         startingbid: 600,
         buyout: 1250,
         category: "fashion",
