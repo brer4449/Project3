@@ -12,12 +12,15 @@ class Bid extends Component {
   }
 
   componentDidMount() {
-    this.displayData();
+    this.displayData("homeAndGarden");
   }
 
   displayData = query => {
-    API.getAllItems(query)
-      .then(res => {
+    // if (query){API.getCategory(query)}
+    // else
+   API.getAllItems(query)
+      .then(res =>  {
+        console.log(res.data)
         this.setState({
           results: res.data
         });
@@ -25,22 +28,23 @@ class Bid extends Component {
       .catch(err => console.log(err));
   };
 
-  searchData = query => {
-    API.getItem(query)
-      .then(res => {
-        this.setState({
-          results: res.data
-        });
-      })
-      .catch(err => console.log(err));
-  };
+  // searchData = query => {
+  //   API.getItem(query)
+  //     .then(res => {
+  //       this.setState({
+  //         results: res.data
+  //       });
+  //     })
+  //     .catch(err => console.log(err));
+  // };
 
   handleInputChange = event => {
     const value = event.target.value;
     const name = event.target.name;
-    this.setState({
+      this.setState({
       [name]: value
-    });
+    }, ()=>{console.log(this.state);
+    this.displayData(this.state.search)});
   };
 
   handleUserSubmit = event => {
@@ -58,33 +62,34 @@ class Bid extends Component {
           </div>
         </div>
         <div className="col-6">
-          <select className="itemSearch">
-            <option id="allItems" value="allItems">
-              All Items
-            </option>
+          <select className="itemSearch" name = "search" onChange={this.handleInputChange}>
+            {/* <option id="allItems" value="allItems" > */}
+              {/* All Items
+            </option> */}
             <option
               id="homeAndGarden"
-              name="homeAndGarden"
+              name="search"
               value="homeAndGarden"
+
             >
               Home and Garden
             </option>
-            <option id="electronics" name="electronics" value="electronics">
+            <option id="electronics" name="search" value="electronics">
               Electronics
             </option>
-            <option id="fashion" name="electronics" value="fashion">
+            <option id="fashion" name="search" value="fashion">
               Fashion
             </option>
             <option
               id="sportingGoods"
-              name="sportingGoods"
+              name="search"
               value="sportingGoods"
             >
               Sporting Goods
             </option>
             <option
               id="businessIndustrial"
-              name="businessIndustrial"
+              name="search"
               value="businessIndustrial"
             >
               Business and Industrial
