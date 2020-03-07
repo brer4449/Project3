@@ -12,7 +12,7 @@ class Bid extends Component {
   }
 
   componentDidMount() {
-    this.displayData();
+    this.displayData("homeAndGarden");
   }
 
   displayData = query => {
