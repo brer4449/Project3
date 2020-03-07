@@ -1,10 +1,20 @@
 import axios from 'axios';
 
+
+// ${query?"?category="+query:null}`);//
+
 export default {
   // Gets all items
-  getAllItems: function() {
-    return axios.get("/api/items");
+  getAllItems: function (query){
+    return axios.get("/api/items?category="+query);
   },
+
+
+  // getCategory: function(query) {
+  //   return axios.get("/api/items?category"+query)
+    
+    
+  
   // Gets the item with the given id
   getItem: function(id) {
     return axios.get("/api/items/" + id);

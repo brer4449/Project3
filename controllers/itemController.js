@@ -6,6 +6,16 @@ module.exports = {
 
     //**Get **/
   findAll: function(req, res) {
+    console.log(req.query)
+    db.Items
+      .find(req.query)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+
+  findCategory: function(req, res) {
+    console.log(req.query)
     db.Items
       .find(req.query)
       .then(dbModel => res.json(dbModel))

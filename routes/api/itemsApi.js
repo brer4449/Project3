@@ -6,7 +6,12 @@ const itemController = require("../../controllers/itemController");
 router
   .route("/")
   .get(itemController.findAll)
+  .get(itemController.findCategory)
   .post(itemController.create);
+
+  router.
+    route("/?")
+    .get(itemController.findCategory);
 
 //Matches with "/api/items/:id"
 
