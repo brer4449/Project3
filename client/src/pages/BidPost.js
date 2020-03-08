@@ -27,6 +27,7 @@ class Bid extends Component {
         });
       })
       .catch(err => console.log(err));
+      
   };
 
   // searchData = query => {
