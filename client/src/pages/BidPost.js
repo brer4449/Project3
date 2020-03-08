@@ -12,13 +12,25 @@ class Bid extends Component {
   }
 
   componentDidMount() {
-    this.displayData("homeAndGarden");
+    if (!this.query) {
+    this.displayAll()}    
+    else{this.displayData()};
   }
+displayAll = ()=>{
+  API.getAllItems()
+  .then(res =>  {
+    console.log(res.data)
+    this.setState({
+      results: res.data
+    });
+  })
+  .catch(err => console.log(err));
+}
+
 
   displayData = query => {
-    // if (query){API.getCategory(query)}
-    // else
-   API.getAllItems(query)
+    // if (!query){API.getAllItems()}    
+   API.getCategoryItems(query)
       .then(res =>  {
         console.log(res.data)
         this.setState({
@@ -63,9 +75,9 @@ class Bid extends Component {
         </div>
         <div className="col-6">
           <select className="itemSearch" name = "search" onChange={this.handleInputChange}>
-            {/* <option id="allItems" value="allItems" > */}
-              {/* All Items
-            </option> */}
+             <option id="allItems" value="" name =""  > 
+               All Items
+            </option> 
             <option
               id="homeAndGarden"
               name="search"
