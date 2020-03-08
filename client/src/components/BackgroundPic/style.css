@@ -1,5 +1,7 @@
 .hero {
-  height: 590px;
+  height: 450px;
+  top:50px;
+  /* width:500px; */
   background-size: cover;
   background-position: center;
   position: relative;

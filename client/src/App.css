@@ -6,20 +6,32 @@ h1 {
   text-align: center;
 }
 
-.card {
-  background: #fff;
-  border-radius: 2px;
-  height: 325px;
-  margin: 1rem;
-  position: relative;
-  width: 325px;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
+.card{
+  border-color: lightgray;
+  padding: 10px;
+  line-height: 1rem;
+
 }
 
+h3{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:red;
+  text-align: center;
+}
+
+.navbar{
+  color:red;
+}
+
+label{
+  font-family: 'Times New Roman', Times, serif;
+  
+}
 .postButton {
   display: block;
   margin: 0 auto;
+  background-color: red;
+  color:white;
 }
 
 img{
@@ -27,4 +39,28 @@ img{
   width:100px;
   margin-top: 40px;
   margin-left:10px;
+}
+
+.file-upload{
+  display:block;
+  text-align:center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;}
+
+
+.file-upload .file-select{
+  display:block;border: 
+  2px solid #dce4ec;
+  color: #34495e;
+  cursor:pointer;
+  height:40px;
+  line-height:40px;
+  text-align:left;
+  background:#dce4ec;
+  overflow:hidden;
+  position:relative;}
+
+.file-select-button{
+  background:#dce4ec;
+  padding:0 10px;
 }
