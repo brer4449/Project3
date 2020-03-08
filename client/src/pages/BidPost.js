@@ -12,26 +12,29 @@ class Bid extends Component {
   }
 
   componentDidMount() {
-    if (!this.query) {
-    this.displayAll()}    
-    else{this.displayData()};
+    if (this.query ) {
+      this.displayData()
+
+    }
+    else { this.displayAll() };
   }
-displayAll = ()=>{
-  API.getAllItems()
-  .then(res =>  {
-    console.log(res.data)
-    this.setState({
-      results: res.data
-    });
-  })
-  .catch(err => console.log(err));
-}
+
+  displayAll = () => {
+    API.getAllItems()
+      .then(res => {
+        console.log(res.data)
+        this.setState({
+          results: res.data
+        });
+      })
+      .catch(err => console.log(err));
+  }
 
 
   displayData = query => {
     // if (!query){API.getAllItems()}    
-   API.getCategoryItems(query)
-      .then(res =>  {
+    API.getCategoryItems(query)
+      .then(res => {
         console.log(res.data)
         this.setState({
           results: res.data
@@ -53,16 +56,23 @@ displayAll = ()=>{
   handleInputChange = event => {
     const value = event.target.value;
     const name = event.target.name;
-      this.setState({
+    this.setState({
       [name]: value
-    }, ()=>{console.log(this.state);
-    this.displayData(this.state.search)});
+    }, () => {
+      console.log(this.state);
+      this.displayData(this.state.search)
+    });
   };
 
-  handleUserSubmit = event => {
+  handleBidSubmit = event => {
     event.preventDefault();
     this.searchData(this.state.search);
   };
+
+  // handleBuyNow = event =>{
+  //   event.preventDefault();
+  //   this.state.search
+  // }
 
   render() {
     return (
@@ -74,10 +84,10 @@ displayAll = ()=>{
           </div>
         </div>
         <div className="col-6">
-          <select className="itemSearch" name = "search" onChange={this.handleInputChange}>
-             <option id="allItems" value="" name =""  > 
-               All Items
-            </option> 
+          <select className="itemSearch" name="search" onChange={this.handleInputChange}>
+            <option id="allItems" value="" name="search"  >
+              All Items
+            </option>
             <option
               id="homeAndGarden"
               name="search"
@@ -111,7 +121,7 @@ displayAll = ()=>{
             className="btn btn-outline-secondary"
             type="button"
             id="searchAlcBtn"
-            // onChange={this.handleInputChange()}
+          // onChange={this.handleInputChange()}
           >
             Search
           </button>
@@ -128,9 +138,24 @@ displayAll = ()=>{
                   <div className="card-body">
                     <h5 className="card-title">{item.itemname}</h5>
                     <p className="card-text">{item.condition}</p>
+                    <div className="row">
+                      <div className ="col-md-4">
                     <p className="card-text">
-                      <small className="text-muted">{item.startingbid}</small>
+                    Highest Bid         
+                      <small className="text-muted">{item.startingbid}</small>                                 
                     </p>
+                    {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
+                    <button className ="btn btn-outline-secondary" type="text" onChange ={this.handleBidSubmit}>Bid</button>
+                    </div>
+                    <div className ="col-md-4">
+                    <p className="card-text">
+                    Buy Now
+                      <small className="text-muted">{item.buyout}</small>                     
+                    </p>
+                    {/*Here goes delete function, alert tha notifies of successful purchase*/}
+                    <button className ="btn btn-outline-secondary" onClick ={this.handleBuyNow}>Buy Now</button>
+                    </div>
+                    </div>                       
                   </div>
                 </div>
               </div>
