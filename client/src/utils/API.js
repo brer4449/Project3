@@ -4,8 +4,13 @@ import axios from 'axios';
 // ${query?"?category="+query:null}`);//
 
 export default {
-  // Gets all items
+  //
   getAllItems: function (query){
+    return axios.get("/api/items");
+  },
+ 
+
+  getCategoryItems: function (query){
     return axios.get("/api/items?category="+query);
   },
 
