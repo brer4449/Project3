@@ -86,23 +86,11 @@ class Bid extends Component {
   render() {
     return (
       <>
-  
+        <Navbar />
+        <br></br>        
         <br></br>
-
-
-        <br></br>
-
-        <form className="form-inline">
-          <div className="form-group col-6 offset-4">
-            <h3>Shop <span className="fun">by</span> category</h3>
-
-
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1 className="display-4">Bid on Item</h1>
-            <p className="lead">Search through the items and place a bid!</p>
-          </div>
-        </div>
+       
+        
         <div className="col-6">
           <input
             className="input"
@@ -113,7 +101,11 @@ class Bid extends Component {
             value={this.state.search}
             style={{ width: 285 }}
           ></input>
+          </div>
           {/* Commented out dropdown, didn't want to delete */}
+          <form className="form-inline">
+          <div className="form-group col-6 offset-4">
+            <h3>Shop <span className="fun">by</span> category</h3>
           <select className="itemSearch" name="search" onChange={this.handleInputChange}>
             <option id="allItems" value="" name="search"  >
               All Items
@@ -123,7 +115,6 @@ class Bid extends Component {
                 id="homeAndGarden"
                 name="search"
                 value="homeAndGarden"
-
               >
                 Home and Garden
             </option>
@@ -147,85 +138,67 @@ class Bid extends Component {
               >
                 Business and Industrial
             </option>
-
-            </select>
-     
-          
-           
-
+          </select> 
           </div>
-        </form>
-
-        <br></br>
+         </form>
+        {/* filter allows us to search by item name or category, but only first word of category (awk) */}
 
         <div className="container">
           <div className="row">
 
 
-            {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
-              return (
-                <>
-
-                  <div className="col-4 sm-12">
-                    <div className="card item-card">
-                      <div className="row">
-
-                        <div className="col-4">
-                          <nav className="card-title">{item.itemname}</nav>
-                          <img src={item.image} className="card-img" alt="..." />
-                        </div>
-                        <br></br>
-                        <div className="content">
-
-                          <ul>
-                            <br></br>
-                            <li><strong>Condition:</strong> {item.condition}</li>
-                            <br></br>
-                            <li><strong>Current bid: $ </strong>{item.startingbid}</li>
-                            <br></br>
-                            <li><strong>Buyout price: $ </strong>{item.buyout} </li>
-                            
-                          </ul>
-                          <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
-<br></br><br></br>
-                          {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                           {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                              
-                          <form>
-                            <div class="form-row">
-                              <div class="form-group">
-                                <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
-                               
-                              </div>
-
-                              <div className="form-group col-md-8">
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" />
-                              </div>
-                             
-                            </div>
-                          </form>
-
-                         
-                        </div>
-
-                      </div>
-
-                    </div>
+        {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
+          return (
+            <>
+            <div className="col-4 sm-12">
+            <div className="card item-card">
+              <div className="row">
+                <div className="col-4">
+                  <nav className="card-title">{item.itemname}</nav>
+                  <img src={item.image} className="card-img" alt="..." />
+                </div>
+                <br></br>
+                <div className="content">
+                  <ul>
                     <br></br>
-                  </div>
-
-
-                </>
-              );
-            })}
-
-
+                    <li><strong>Condition:</strong> {item.condition}</li>
+                    <br></br>
+                    <li><strong>Current bid: $ </strong>{item.startingbid}</li>
+                    <br></br>
+                    <li><strong>Buyout price: $ </strong>{item.buyout} </li>
+                    
+                  </ul>
+                  <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
+<br></br><br></br>
+                  {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
+                   {/*Here goes delete function, alert tha notifies of successful purchase*/}
+                      
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
+                       
+                      </div>
+                      <div className="form-group col-md-8">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" />
+                      </div>
+                     
+                    </div>
+                  </form>
+                 
+                </div>
+              </div>
+            </div>
+            <br></br>
           </div>
+            </>
 
-
-        </div>
-      </>
-
+          );
+        })}
+      </div>
+      </div>
+      
+        </>
     );
   }
 }
