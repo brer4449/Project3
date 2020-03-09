@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>Auction Room ©2020</span>
+      <span>BidBot ©2020</span>
     </footer>
   );
 }
