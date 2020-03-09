@@ -52,10 +52,15 @@ label{
 
 .item-card{
   border-color:  rgb(14, 99, 124);
+  display:inline-block;
 }
 
-img{
+.card-img{
   height:100px;
+}
+
+.bot{
+  height:300px;
 }
 
 .bid{

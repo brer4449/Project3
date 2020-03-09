@@ -84,48 +84,48 @@ class Bid extends Component {
 
 
         <br></br>
-        <div className="container-fluid">
+        {/* <div className="container-fluid"> */}
 
-          <form className="form-inline">
-            <div className="form-group col-6 offset-4">
-              <h3>Shop <span className="fun">by</span> category</h3>
+        <form className="form-inline">
+          <div className="form-group col-6 offset-4">
+            <h3>Shop <span className="fun">by</span> category</h3>
 
-              <select className="itemSearch custom-select" name="search" onChange={this.handleInputChange}>
-                <option id="allItems" value="" name="search"  >
-                  ...
+            <select className="itemSearch custom-select" name="search" onChange={this.handleInputChange}>
+              <option id="allItems" value="" name="search"  >
+                ...
             </option>
-                <option
-                  id="homeAndGarden"
-                  name="search"
-                  value="homeAndGarden"
+              <option
+                id="homeAndGarden"
+                name="search"
+                value="homeAndGarden"
 
-                >
-                  Home and Garden
+              >
+                Home and Garden
             </option>
-                <option id="electronics" name="search" value="electronics">
-                  Electronics
+              <option id="electronics" name="search" value="electronics">
+                Electronics
             </option>
-                <option id="fashion" name="search" value="fashion">
-                  Fashion
+              <option id="fashion" name="search" value="fashion">
+                Fashion
             </option>
-                <option
-                  id="sportingGoods"
-                  name="search"
-                  value="sportingGoods"
-                >
-                  Sporting Goods
+              <option
+                id="sportingGoods"
+                name="search"
+                value="sportingGoods"
+              >
+                Sporting Goods
             </option>
-                <option
-                  id="businessIndustrial"
-                  name="search"
-                  value="businessIndustrial"
-                >
-                  Business and Industrial
+              <option
+                id="businessIndustrial"
+                name="search"
+                value="businessIndustrial"
+              >
+                Business and Industrial
             </option>
-              </select>
+            </select>
 
 
-              {/* <button
+            {/* <button
             className="btn btn-outline-secondary btn-large"
             type="button"
             id="searchAlcBtn"
@@ -135,61 +135,68 @@ class Bid extends Component {
           </button> */}
 
 
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
+        {/* </div> */}
         <br></br>
 
-        {this.state.results.map(item => {
-          return (
+        <div className="container">
+          <div className="row">
+            <div className="col-4">
 
-            <div className="container">
-               <div className="row">
-                <div class="col-md-4">
+              {this.state.results.map(item => {
+                return (
+                  <>
 
-                  <div className="card item-card col-12">
-                    <div className="row no-gutters">
 
-                      <div className="col-md-4">
-                        <h5 className="card-title">{item.itemname}</h5>
-                        <img src={item.image} className="card-img" alt="..." />
+                    {/* <div className="row">
+  <div className="col-12"> */}
+                    <div className="card item-card">
+                      <div className="row">
+
+                        <div className="col-4">
+                          <h5 className="card-title">{item.itemname}</h5>
+                          <img src={item.image} className="card-img" alt="..." />
+                        </div>
+                        <br></br>
+                        <div className="content">
+
+                          <ul>
+                            <br></br>
+                            <li><strong>Condition:</strong> {item.condition}</li>
+                            <br></br>
+                            <li><strong>Current bid: $ </strong>{item.startingbid}</li>
+                            <br></br>
+                            <li><strong>Buyout price: $ </strong>{item.buyout} </li>
+                          </ul>
+
+
+                          {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
+                          <form className="form-inline">
+                            <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
+
+
+                            {/*Here goes delete function, alert tha notifies of successful purchase*/}
+                            <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
+                          </form>
+                        </div>
                       </div>
-                      <br></br>
-                      <div className="content">
-                      
-                        <ul>
-                          <br></br>
-                          <li><strong>Condition:</strong> {item.condition}</li>
-                          <br></br>
-                          <li><strong>Current bid: $ </strong>{item.startingbid}</li>
-                          <br></br>
-                          <li><strong>Buyout price: $ </strong>{item.buyout} </li>
-                        </ul>
 
-
-                        {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                        <form className="form-inline">
-                          <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
-
-                        
-                          {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                          <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
-                        </form>
-                      </div>
                     </div>
-                   
-                  </div>
-                  
-                </div>
-              </div>
-             
-              
+                    {/* </div> */}
+
+                    {/* </div> */}
+
+
+                  </>
+                );
+              })}
+
             </div>
-            
-          );
-        })}
+          </div>
 
 
+        </div>
       </>
     );
   }
