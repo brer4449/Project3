@@ -114,7 +114,7 @@ const itemSeed = [
     {
         _id: 12,
         image: "/images/electronics4.jpg",
-        itemname: "LG Smart TV",
+        itemname: "Smart TV",
         startingbid: 550,
         buyout: 1000,
         category: "electronics",
@@ -160,7 +160,9 @@ const itemSeed = [
     {
         _id: 17,
         image: "/images/fashion1.jpg",
-        itemname: "Movado Women's Watch",
+
+        itemname: "Women's watch",
+
         startingbid: 50,
         buyout: 125,
         category: "fashion",
@@ -178,7 +180,9 @@ const itemSeed = [
     {
         _id: 19,
         image: "/images/fashion3.jpg",
-        itemname: "Burberry Women's Scarf",
+
+        itemname: "Burberry scarf",
+
         startingbid: 160,
         buyout: 275,
         category: "fashion",
@@ -187,7 +191,9 @@ const itemSeed = [
     {
         _id: 20,
         image: "/images/fashion4.jpg",
-        itemname: "Gucci Women's Bag",
+
+        itemname: "Women's bag",
+
         startingbid: 800,
         buyout: 1400,
         category: "fashion",
@@ -251,7 +257,9 @@ const itemSeed = [
     {
         _id: 27,
         image: "/images/sport3.jpg",
-        itemname: "American Football",
+
+        itemname: "Football ball",
+
         startingbid: 30,
         buyout: 80,
         category: "sportsGoods",
@@ -302,80 +310,81 @@ const itemSeed = [
         category: "sportsGoods",
         condition: "New"
     },
-    // businessIndustrial
-    {
-        _id: 33,
-        image: "/images/business1.jpg",
-        itemname: "Printer",
-        startingbid: 80,
-        buyout: 200,
-        category: "businessIndustrial",
-        condition: "New"
-    },
-    {
-        _id: 34,
-        image: "/images/business2.jpg",
-        itemname: "Office Desk",
-        startingbid: 150,
-        buyout: 300,
-        category: "businessIndustrial",
-        condition: "Good"
-    },
-    {
-        _id: 35,
-        image: "/images/business3.jpg",
-        itemname: "Cubicle?",
-        startingbid: 400,
-        buyout: 950,
-        category: "businessIndustrial",
-        condition: "Good"
-    },
-    {
-        _id: 36,
-        image: "/images/business4.jpg",
-        itemname: "Cash Register",
-        startingbid: 2000,
-        buyout: 3000,
-        category: "businessIndustrial",
-        condition: "New"
-    },
-    {
-        _id: 37,
-        image: "/images/business5.jpg",
-        itemname: "Safe",
-        startingbid: 1300,
-        buyout: 1800,
-        category: "businessIndustrial",
-        condition: "Good"
-    },
-    {
-        _id: 38,
-        image: "/images/business6.jpg",
-        itemname: "Fingerprint Scanner",
-        startingbid: 1200,
-        buyout: 2500,
-        category: "businessIndustrial",
-        condition: "New"
-    },
-    {
-        _id: 39,
-        image: "/images/business7.jpg",
-        itemname: "Payment Machine",
-        startingbid: 900,
-        buyout: 1600,
-        category: "businessIndustrial",
-        condition: "New"
-    },
-    {
-        _id: 40,
-        image: "/images/business8.jpg",
-        itemname: "Shredder",
-        startingbid: 400,
-        buyout: 600,
-        category: "businessIndustrial",
-        condition: "Good"
-    },
-]
+
+   // businessIndustrial
+   {
+    _id: 33,
+    image: "/images/business1.jpg",
+    itemname: "Printer",
+    startingbid: 80,
+    buyout: 200,
+    category: "businessIndustrial",
+    condition: "New"
+},
+{
+    _id: 34,
+    image: "/images/business2.jpg",
+    itemname: "Office desk",
+    startingbid: 150,
+    buyout: 300,
+    category: "businessIndustrial",
+    condition: "Good"
+},
+{
+    _id: 35,
+    image: "/images/business3.jpg",
+    itemname: "Moving cubicles",
+    startingbid: 400,
+    buyout: 950,
+    category: "businessIndustrial",
+    condition: "Good"
+},
+{
+    _id: 36,
+    image: "/images/business4.jpg",
+    itemname: "Cash register",
+    startingbid: 2000,
+    buyout: 3000,
+    category: "businessIndustrial",
+    condition: "New"
+},
+{
+    _id: 37,
+    image: "/images/business5.jpg",
+    itemname: "Lock safe",
+    startingbid: 1300,
+    buyout: 1800,
+    category: "businessIndustrial",
+    condition: "Good"
+},
+{
+    _id: 38,
+    image: "/images/business6.jpg",
+    itemname: "Finger printer",
+    startingbid: 1200,
+    buyout: 2500,
+    category: "businessIndustrial",
+    condition: "New"
+},
+{
+    _id: 39,
+    image: "/images/business7.jpg",
+    itemname: "Payment mashine",
+    startingbid: 900,
+    buyout: 1600,
+    category: "businessIndustrial",
+    condition: "New"
+},
+{
+    _id: 40,
+    image: "/images/business8.jpg",
+    itemname: "Shredder",
+    startingbid: 400,
+    buyout: 600,
+    category: "businessIndustrial",
+    condition: "Good"
+},
+  ]
 
 
 db.Items
