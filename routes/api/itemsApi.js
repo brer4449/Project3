@@ -17,8 +17,8 @@ router
 
 router
   .route("/:id")
-  .get(itemController.findById)
-  .update(itemController.update)
+  
+//   .update(itemController.update)
   .delete(itemController.remove);
 
 module.exports = router;
