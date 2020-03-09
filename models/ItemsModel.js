@@ -7,18 +7,23 @@ image: {
     default:""
 },
   
-itemname: { type: String, 
-required: true 
+itemname: { 
+  type: String, 
+  required: true 
 },
+
   startingbid: { type: Number, required: true 
 },  
+
   buyout: {type:Number,
     required:true
 },
+
 category:{
     type: String,
     required:true
 },
+
   condition: { type: String,
     required:true 
 }
