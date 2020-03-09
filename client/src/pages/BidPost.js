@@ -47,7 +47,7 @@ class Bid extends Component {
 
   };
 
-  //Function that delets items by ID//
+  //Function that deletes items by ID//
 
   deleteItem = (id) => {
     API.deleteItem(id)
@@ -60,10 +60,13 @@ class Bid extends Component {
     const name = event.target.name;
     this.setState({
       [name]: value
-    }, () => {
-      console.log(this.state);
-      this.displayData(this.state.search)
-    });
+    }
+      //commented this out because I'm not sure what it does and it wasn't letting my search function work... we probs need it tho
+      // , () => {
+      //   console.log(this.state);
+      //   this.displayData(this.state.search)
+      // }
+    );
   };
 
   handleBidSubmit = event => {
@@ -71,8 +74,8 @@ class Bid extends Component {
     this.searchData(this.state.search);
   };
 
-  placeBid =()=>{
-  
+  placeBid = () => {
+
   }
 
   // handleBuyNow = event =>{
@@ -84,19 +87,28 @@ class Bid extends Component {
     return (
       <>
         <Navbar />
-        <br></br>
 
-
-        <br></br>
-        {/* <div className="container-fluid"> */}
-
-        <form className="form-inline">
-          <div className="form-group col-6 offset-4">
-            <h3>Shop <span className="fun">by</span> category</h3>
-
-            <select className="itemSearch custom-select" name="search" onChange={this.handleInputChange}>
-              <option id="allItems" value="" name="search"  >
-                ...
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4">Bid on Item</h1>
+            <p className="lead">Search through the items and place a bid!</p>
+          </div>
+        </div>
+        <div className="col-6">
+          <input
+            className="input"
+            placeholder="Search by Item Name or Category Here"
+            type="text"
+            onChange={this.handleInputChange.bind(this)}
+            name="search"
+            value={this.state.search}
+            style={{ width: 285 }}
+          ></input>
+          {/* Commented out dropdown, didn't want to delete */}
+          {/* <select className="itemSearch" name="search" onChange={this.handleInputChange}>
+            <option id="allItems" value="" name="search"  >
+              All Items
+        
             </option>
               <option
                 id="homeAndGarden"
@@ -126,8 +138,7 @@ class Bid extends Component {
               >
                 Business and Industrial
             </option>
-
-          </select>
+          </select> */}
           {/* <button
             className="btn btn-outline-secondary"
 
@@ -140,70 +151,54 @@ class Bid extends Component {
           </button> */}
 
 
+        {/* filter allows us to search by item name or category, but only first word of category (awk) */}
+        {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
+          return (
+            <div className="card mb-3" style={{ width: "90%" }}>
+              <div className="row no-gutters">
+                <div className="col-md-4">
+                  <img src={item.image} className="card-img" alt="..." />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title">{item.itemname}</h5>
+                    <p className="card-text">Condition: {item.condition}</p>
+                    <div className="row">
+                      <div className="col-md-4">
+                        <p className="card-text">
+                          Highest Bid: $
+                      <font className="text-muted">{item.startingbid}</font>
+                        </p>
+                        {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
 
-          </div>
-        </form>
-        {/* </div> */}
-        <br></br>
+                        {/* <button className="btn btn-outline-secondary" type="text" onChange={this.handleBidSubmit}>Bid</button> */}
+                        <form>
+                          <label>
+                            <input type="text" name="name" style={{ width: "70%", borderRadius: "3px" }} />
+                          </label>
+                          <input type="submit" value="Bid" className="btn btn-outline-secondary" />
+                        </form>
+                      </div>
+                      <div className="col-md-4">
+                        <p className="card-text">
+                          Buy Now: $
+                      <font className="text-muted">{item.buyout}</font>
+                        </p>
+                        {/*Here goes delete function, alert tha notifies of successful purchase*/}
+                        <button className="btn btn-outline-secondary" onClick={() => this.deleteItem(item._id)}>Buy Now</button>
 
-        <div className="container">
-          <div className="row">
-            <div className="col-4">
-
-              {this.state.results.map(item => {
-                return (
-                  <>
-
-
-                    {/* <div className="row">
-              <div className="col-12"> */}
-                    <div className="card item-card">
-                      <div className="row">
-
-                        <div className="col-4">
-                          <h5 className="card-title">{item.itemname}</h5>
-                          <img src={item.image} className="card-img" alt="..." />
-                        </div>
-                        <br></br>
-                        <div className="content">
-
-                          <ul>
-                            <br></br>
-                            <li><strong>Condition:</strong> {item.condition}</li>
-                            <br></br>
-                            <li><strong>Current bid: $ </strong>{item.startingbid}</li>
-                            <br></br>
-                            <li><strong>Buyout price: $ </strong>{item.buyout} </li>
-                          </ul>
-
-
-                          {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                          <form className="form-inline">
-                            <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
-
-
-                            {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                            <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
-                          </form>
-                        </div>
                       </div>
 
                     </div>
-                    {/* </div> */}
 
-                    {/* </div> */}
-
-
-                  </>
-                );
-              })}
-
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-
-        </div>
-      </>
+          );
+        })}
+      </div>
 
     );
   }
