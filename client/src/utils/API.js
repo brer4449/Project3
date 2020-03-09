@@ -28,8 +28,10 @@ export default {
   deleteItem: function(id) {
     return axios.delete("/api/items/" + id);
   },
+  
   // Saves an item to the database
   saveItem: function(itemData) {
+    console.log("api route hit");
     return axios.post("/api/items", itemData);
   }
 };
