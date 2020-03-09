@@ -1,14 +1,18 @@
 import API from "../utils/API";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import Navbar from "../components/Navbar/index";
 import Footer from "../components/Footer";
-
-
+import Dropzone from 'react-dropzone'
 
 function PostPage() {
   // Setting our component's initial state
   const [Items, setItems] = useState([])
   const [formObject, setFormObject] = useState({})
+  const [selectFile, setSelectFile] = useState({})
+
+  function onDrop(acceptedFiles) {
+    console.log(acceptedFiles);
+  }
 
   // Load all items and store them with setItems
   useEffect(() => {
@@ -20,6 +24,7 @@ function PostPage() {
       .then(res => setItems(res)
         )      
       .catch(err => console.log(err));
+
   }
 
   function handleInputChange(event) {
@@ -31,19 +36,17 @@ function PostPage() {
   // Then reload itms from the database
   function handleSubmit(event) {
     event.preventDefault();
-    if (formObject.itemname && formObject.startingbid) {
-      API.saveItem({
-        itemname: formObject.itemname,
-        startingbid: formObject.startingbid,
-        category: formObject.category,
-        condition: formObject.condition,
-        buyout: formObject.condition
-      })
-        .then(res =>  displayAll())
-        .catch(err => console.log(err));
-    }
+    console.log(formObject);
+    // if (formObject.itemname && formObject.startingbid) {
+      API.saveItem(formObject)
+        .then(res =>  {
+          displayAll();
+          alert("Your item has been added!");
+          window.location.reload(false);
+        })
+        .catch(err => console.log(err))
+    // }
   };  
-  
 
     return (
       <>
@@ -67,24 +70,25 @@ function PostPage() {
                   <br></br>
                   <div class="form-row">
                     <div class="form-group col-md-12">
-                      <label htmlFor="itemName">Enter Item Name</label>
-                      <input id="itemName" name="itemName" type="text" class="form-control" onChange ={handleInputChange} />
+                      <label htmlFor="itemname">Enter Item Name</label>
+                      <input name="itemname" type="text" className="form-control" onChange={handleInputChange} />
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
-                      <label htmlFor="startPrice">Starting Price</label>
-                      <input id="startPrice" name="startPrice" type="startPrice" class="form-control" onChange ={handleInputChange} />
+                      <label htmlFor="startingbid">Starting Price</label>
+                      <input name="startingbid" type="startingbid" class="form-control" onChange ={handleInputChange} />
                     </div>
                     <div class="form-group col-md-12">
-                      <label htmlFor="startPrice">Buy Now</label>
-                      <input id="startPrice" name="startPrice" type="startPrice" class="form-control" onChange ={handleInputChange} />
+                      <label htmlFor="buyout">Buy out price</label>
+                      <input id="buyout" name="buyout" type="buyout" class="form-control" onChange ={handleInputChange} />
                     </div>
+                    
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label for="category">Choose a category</label>
-                      <select id="category" class="form-control" onChange ={handleInputChange}>
+                      <select name="category" class="form-control" onChange ={handleInputChange}>
                         <option>...</option>
                         <option>Home and garden</option>
                         <option>Electronics</option>
@@ -97,7 +101,7 @@ function PostPage() {
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label for="condition">Add item condition</label>
-                      <select id="condition" class="form-control" onChange ={handleInputChange}>
+                      <select name="condition" class="form-control" onChange ={handleInputChange}>
                         <option>...</option>
                         <option>New</option>
                         <option>Good</option>
@@ -105,25 +109,32 @@ function PostPage() {
                       </select>
                     </div>
                   </div>
-                  
-                  <div class="form-row">
+                  <Dropzone
+                    onDrop={this.onDrop}
+                    accept="image/png"
+                  >
+                    {({getRootProps, getInputProps, isDragActive, isDragReject}) => (
+                      <div {...getRootProps()}>
+                        <input {...getInputProps()} />
+                        {!isDragActive && 'Click here or drop a file to upload!'}
+                        {isDragActive && !isDragReject && "Drop it like it's hot!"}
+                        {isDragReject && "File type not accepted, sorry!"}
+                      </div>
+                    )}
+                  </Dropzone>
+                  {/* <div class="form-row">
                     <div class="form-group col-md-12 ">
                     <label htmlFor="img">Upload product image</label>
                       <div class="file-upload">
                         <div class="file-select">
-
-                          
-                         <input id="img" name="img" type="file" />
-                      
-                        
+                         <input id="img" name="image" type="file" />
                         </div>
                       </div>
-
                     </div>
-                  </div>
+                  </div> */}
                   <br></br>
 
-                  <button className="postButton btn" onClick={handleSubmit}>Post Item!</button>
+                  <button id="myForm" className="postButton btn" onClick={handleSubmit}>Post Item!</button>
                   <br />
                 </form>
               </div>
