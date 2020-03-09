@@ -105,7 +105,7 @@ class Bid extends Component {
             style={{ width: 285 }}
           ></input>
           {/* Commented out dropdown, didn't want to delete */}
-          {/* <select className="itemSearch" name="search" onChange={this.handleInputChange}>
+          <select className="itemSearch" name="search" onChange={this.handleInputChange}>
             <option id="allItems" value="" name="search"  >
               All Items
         
@@ -138,19 +138,8 @@ class Bid extends Component {
               >
                 Business and Industrial
             </option>
-          </select> */}
-          {/* <button
-            className="btn btn-outline-secondary"
-
-            type="button"
-            id="searchAlcBtn"
-           
-          // onChange={this.handleInputChange()}
-          >
-            Search
-          </button> */}
-
-
+          </select> 
+         
         {/* filter allows us to search by item name or category, but only first word of category (awk) */}
         {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
           return (
@@ -199,7 +188,7 @@ class Bid extends Component {
           );
         })}
       </div>
-
+        </>
     );
   }
 }

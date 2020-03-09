@@ -73,7 +73,7 @@ function PostPage() {
                     </div>
 
                   </div>
-                </div>
+                {/* </div> */}
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label htmlFor="startPrice">Starting Price</label>
