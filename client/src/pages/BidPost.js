@@ -47,7 +47,7 @@ class Bid extends Component {
 
   };
 
-  //Function that delets items by ID//
+  //Function that deletes items by ID//
 
   deleteItem = (id) => {
     API.deleteItem(id)
@@ -60,10 +60,13 @@ class Bid extends Component {
     const name = event.target.name;
     this.setState({
       [name]: value
-    }, () => {
-      console.log(this.state);
-      this.displayData(this.state.search)
-    });
+    }
+      //commented this out because I'm not sure what it does and it wasn't letting my search function work... we probs need it tho
+      // , () => {
+      //   console.log(this.state);
+      //   this.displayData(this.state.search)
+      // }
+    );
   };
 
   handleBidSubmit = event => {
@@ -83,7 +86,7 @@ class Bid extends Component {
   render() {
     return (
       <>
-        <Navbar />
+  
         <br></br>
 
 
@@ -93,9 +96,28 @@ class Bid extends Component {
           <div className="form-group col-6 offset-4">
             <h3>Shop <span className="fun">by</span> category</h3>
 
-            <select className="itemSearch custom-select" name="search" onChange={this.handleInputChange}>
-              <option id="allItems" value="" name="search"  >
-                ...
+
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4">Bid on Item</h1>
+            <p className="lead">Search through the items and place a bid!</p>
+          </div>
+        </div>
+        <div className="col-6">
+          <input
+            className="input"
+            placeholder="Search by Item Name or Category Here"
+            type="text"
+            onChange={this.handleInputChange.bind(this)}
+            name="search"
+            value={this.state.search}
+            style={{ width: 285 }}
+          ></input>
+          {/* Commented out dropdown, didn't want to delete */}
+          <select className="itemSearch" name="search" onChange={this.handleInputChange}>
+            <option id="allItems" value="" name="search"  >
+              All Items
+        
             </option>
               <option
                 id="homeAndGarden"
@@ -125,19 +147,11 @@ class Bid extends Component {
               >
                 Business and Industrial
             </option>
+
             </select>
-
-
-            {/* <button
-            className="btn btn-outline-secondary btn-large"
-            type="button"
-            id="searchAlcBtn"
+     
+          
            
-          // onChange={this.handleInputChange()}
-          >
-            Search
-          </button> */}
-
 
           </div>
         </form>
@@ -148,7 +162,7 @@ class Bid extends Component {
           <div className="row">
 
 
-            {this.state.results.map(item => {
+            {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
               return (
                 <>
 
@@ -211,6 +225,7 @@ class Bid extends Component {
 
         </div>
       </>
+
     );
   }
 }
