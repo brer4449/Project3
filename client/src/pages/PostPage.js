@@ -13,23 +13,24 @@ function PostPage() {
     displayAll()
   }, [])
 
-  function displayAll()  {
+  function displayAll() {
     API.getAllItems()
       .then(res => setItems(res)
-        )      
+      )
       .catch(err => console.log(err));
 
   }
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value })
   };
 
   // When the form is submitted, use the API.saveItem method to save the item data
-  // Then reload itms from the database
+  // Then reload items from the database
   function handleSubmit(event) {
     event.preventDefault();
+
     console.log(formObject);
     // if (formObject.itemname && formObject.startingbid) {
       API.saveItem(formObject)
@@ -40,6 +41,7 @@ function PostPage() {
         })
         .catch(err => console.log(err))
     // }
+
   };  
 
     return (
@@ -67,13 +69,16 @@ function PostPage() {
                       <label htmlFor="itemname">Enter Item Name</label>
                       <input name="itemname" type="text" className="form-control" onChange={handleInputChange} />
                     </div>
+
                   </div>
+
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label htmlFor="startingbid">Starting Price</label>
                       <input name="startingbid" type="startingbid" class="form-control" onChange ={handleInputChange} />
                     </div>
                     <div class="form-group col-md-12">
+
                       <label htmlFor="buyout">Buy out price</label>
                       <input id="buyout" name="buyout" type="buyout" class="form-control" onChange ={handleInputChange} />
                     </div>
@@ -102,7 +107,9 @@ function PostPage() {
                         <option>Used</option>
                       </select>
                     </div>
+
                   </div>
+
                   
                   <div class="form-row">
                     <div class="form-group col-md-12 ">
@@ -111,24 +118,31 @@ function PostPage() {
                         <div class="file-select">
                          <input id="img" name="image" type="file" />
                         </div>
-                      </div>
+                      </div>                      
+
                     </div>
+
                   </div>
+
                   <br></br>
+
 
                   <button id="myForm" className="postButton btn" onClick={handleSubmit}>Post Item!</button>
                   <br />
                 </form>
               </div>
               <br></br>
+
             </div>
+            <br></br>
           </div>
         </div>
-        <Footer />
-      </>
+      </div>
+      <Footer />
+    </>
 
-    );
-  }
+  );
+}
 
 
 export default PostPage;

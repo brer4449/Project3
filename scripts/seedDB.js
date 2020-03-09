@@ -5,25 +5,25 @@ const db = require("../models");
 mongoose.connect(
     process.env.MONGODB_URI ||
     "mongodb://localhost/auction"
-  );
+);
 
 
-  // for front end make dropdown for categories: Home and garden, Electronics, Fashion, Sporting goods, businessIndustrial
-  const itemSeed = [
-      // Home and garden
-      {
-          _id: 1,
-          image: "/images/home1.jpg",
-          itemname: "Laundry mashine",
-          startingbid: 200,
-          buyout: 500,
-          category: "homeAndGarden",
-          condition: "Good"
-      },
-      {
+// for front end make dropdown for categories: Home and garden, Electronics, Fashion, Sporting goods, businessIndustrial
+const itemSeed = [
+    // Home and garden
+    {
+        _id: 1,
+        image: "/images/home1.jpg",
+        itemname: "Laundry Machine",
+        startingbid: 200,
+        buyout: 500,
+        category: "homeAndGarden",
+        condition: "Good"
+    },
+    {
         _id: 2,
         image: "/images/home2.jpg",
-        itemname: "Massage chair",
+        itemname: "Massage Chair",
         startingbid: 500,
         buyout: 1500,
         category: "homeAndGarden",
@@ -32,7 +32,7 @@ mongoose.connect(
     {
         _id: 3,
         image: "/images/home3.jpg",
-        itemname: "Gas stove",
+        itemname: "Gas Stove",
         startingbid: 800,
         buyout: 2000,
         category: "homeAndGarden",
@@ -41,7 +41,7 @@ mongoose.connect(
     {
         _id: 4,
         image: "/images/home4.jpg",
-        itemname: "Coffee mashine",
+        itemname: "Coffee Machine",
         startingbid: 300,
         buyout: 600,
         category: "homeAndGarden",
@@ -50,7 +50,7 @@ mongoose.connect(
     {
         _id: 5,
         image: "/images/home5.jpg",
-        itemname: "Patio set",
+        itemname: "Patio Set",
         startingbid: 40,
         buyout: 100,
         category: "homeAndGarden",
@@ -59,7 +59,7 @@ mongoose.connect(
     {
         _id: 6,
         image: "/images/home6.jpg",
-        itemname: "Lawn mashine",
+        itemname: "Lawn Machine",
         startingbid: 600,
         buyout: 1000,
         category: "homeAndGarden",
@@ -77,7 +77,7 @@ mongoose.connect(
     {
         _id: 8,
         image: "/images/home8.jpg",
-        itemname: "Dining set",
+        itemname: "Dining Set",
         startingbid: 50,
         buyout: 120,
         category: "homeAndGarden",
@@ -87,7 +87,7 @@ mongoose.connect(
     {
         _id: 9,
         image: "/images/electronics1.jpg",
-        itemname: "Iphone 10",
+        itemname: "iPhone 10",
         startingbid: 300,
         buyout: 650,
         category: "electronics",
@@ -96,7 +96,7 @@ mongoose.connect(
     {
         _id: 10,
         image: "/images/electronics2.jpg",
-        itemname: "Lenovo laptop",
+        itemname: "Lenovo Laptop",
         startingbid: 500,
         buyout: 1100,
         category: "electronics",
@@ -105,7 +105,7 @@ mongoose.connect(
     {
         _id: 11,
         image: "/images/electronics3.jpg",
-        itemname: "Apple tablet",
+        itemname: "Apple Tablet",
         startingbid: 150,
         buyout: 400,
         category: "electronics",
@@ -114,7 +114,7 @@ mongoose.connect(
     {
         _id: 12,
         image: "/images/electronics4.jpg",
-        itemname: "LG Smart TV",
+        itemname: "Smart TV",
         startingbid: 550,
         buyout: 1000,
         category: "electronics",
@@ -132,7 +132,7 @@ mongoose.connect(
     {
         _id: 14,
         image: "/images/electronics6.jpg",
-        itemname: "Robotic vacuum",
+        itemname: "Robotic Vacuum",
         startingbid: 600,
         buyout: 1100,
         category: "electronics",
@@ -156,11 +156,13 @@ mongoose.connect(
         category: "electronics",
         condition: "Used"
     },
-// Fashion
+    // Fashion
     {
         _id: 17,
         image: "/images/fashion1.jpg",
-        itemname: "Movado women's watch",
+
+        itemname: "Women's watch",
+
         startingbid: 50,
         buyout: 125,
         category: "fashion",
@@ -169,7 +171,7 @@ mongoose.connect(
     {
         _id: 18,
         image: "/images/fashion2.jpg",
-        itemname: "Women's ring",
+        itemname: "Women's Ring",
         startingbid: 600,
         buyout: 1250,
         category: "fashion",
@@ -178,7 +180,9 @@ mongoose.connect(
     {
         _id: 19,
         image: "/images/fashion3.jpg",
-        itemname: "Burberry women's scarf",
+
+        itemname: "Burberry scarf",
+
         startingbid: 160,
         buyout: 275,
         category: "fashion",
@@ -187,7 +191,9 @@ mongoose.connect(
     {
         _id: 20,
         image: "/images/fashion4.jpg",
-        itemname: "Gucci women's bag",
+
+        itemname: "Women's bag",
+
         startingbid: 800,
         buyout: 1400,
         category: "fashion",
@@ -196,7 +202,7 @@ mongoose.connect(
     {
         _id: 21,
         image: "/images/fashion5.jpg",
-        itemname: "Women's coat",
+        itemname: "Women's Coat",
         startingbid: 80,
         buyout: 190,
         category: "fashion",
@@ -205,7 +211,7 @@ mongoose.connect(
     {
         _id: 22,
         image: "/images/fashion6.jpg",
-        itemname: "Men's bracelet",
+        itemname: "Men's Bracelet",
         startingbid: 300,
         buyout: 500,
         category: "fashion",
@@ -214,7 +220,7 @@ mongoose.connect(
     {
         _id: 23,
         image: "/images/fashion7.jpg",
-        itemname: "Men's bag",
+        itemname: "Men's Bag",
         startingbid: 180,
         buyout: 260,
         category: "fashion",
@@ -223,7 +229,7 @@ mongoose.connect(
     {
         _id: 24,
         image: "/images/fashion8.jpg",
-        itemname: "Men's coat",
+        itemname: "Men's Coat",
         startingbid: 60,
         buyout: 140,
         category: "fashion",
@@ -236,25 +242,27 @@ mongoose.connect(
         itemname: "Bicycle",
         startingbid: 1500,
         buyout: 2500,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "New"
     },
     {
         _id: 26,
         image: "/images/sport2.jpg",
-        itemname: "Boxing gloves",
+        itemname: "Boxing Gloves",
         startingbid: 40,
         buyout: 95,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "New"
     },
     {
         _id: 27,
         image: "/images/sport3.jpg",
-        itemname: "American football ball",
+
+        itemname: "Football ball",
+
         startingbid: 30,
         buyout: 80,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "New"
     },
     {
@@ -263,45 +271,46 @@ mongoose.connect(
         itemname: "Snowboard",
         startingbid: 200,
         buyout: 450,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "Good"
     },
     {
         _id: 29,
         image: "/images/sport5.jpg",
-        itemname: "Sports bag",
+        itemname: "Sports Bag",
         startingbid: 60,
         buyout: 115,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "New"
     },
     {
         _id: 30,
         image: "/images/sport6.jpg",
-        itemname: "Golf set",
+        itemname: "Golf Set",
         startingbid: 200,
         buyout: 450,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "New"
     },
     {
         _id: 31,
         image: "/images/sport7.jpg",
-        itemname: "Skiing suit",
+        itemname: "Ski Suit",
         startingbid: 80,
         buyout: 150,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "Good"
     },
     {
         _id: 32,
         image: "/images/sport8.jpg",
-        itemname: "Sports glasses",
+        itemname: "Sports Glasses",
         startingbid: 60,
         buyout: 200,
-        category: "sportingGoods",
+        category: "sportsGoods",
         condition: "New"
     },
+
    // businessIndustrial
    {
     _id: 33,
@@ -324,7 +333,7 @@ mongoose.connect(
 {
     _id: 35,
     image: "/images/business3.jpg",
-    itemname: "Sustainable moving boxes",
+    itemname: "Moving cubicles",
     startingbid: 400,
     buyout: 950,
     category: "businessIndustrial",
@@ -377,15 +386,15 @@ mongoose.connect(
 },
   ]
 
-  
+
 db.Items
-.remove({})
-.then(() => db.Items.collection.insertMany(itemSeed))
-.then(data => {
-  console.log(data.result.n + " records inserted!");
-  process.exit(0);
-})
-.catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+    .remove({})
+    .then(() => db.Items.collection.insertMany(itemSeed))
+    .then(data => {
+        console.log(data.result.n + " records inserted!");
+        process.exit(0);
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    });
