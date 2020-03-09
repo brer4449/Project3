@@ -1,9 +1,7 @@
 .footer {
   height: 100px;
-  padding-top: 60px;
- 
+  padding-top: 220px;
   position: relative;
-
 }
 
 .footer span {
@@ -12,5 +10,7 @@
   left: 0;
   right: 0;
   padding: 10px;
-  background: #B8B8B8;
+  background: lightgray;
+  color:rgb(14, 99, 124);
+  font-weight: bold;
 }

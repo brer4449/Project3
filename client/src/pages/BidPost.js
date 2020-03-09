@@ -85,8 +85,9 @@ class Bid extends Component {
 
   render() {
     return (
-      <div className="container">
+      <>
         <Navbar />
+
         <div className="jumbotron jumbotron-fluid">
           <div className="container">
             <h1 className="display-4">Bid on Item</h1>
@@ -107,38 +108,40 @@ class Bid extends Component {
           {/* <select className="itemSearch" name="search" onChange={this.handleInputChange}>
             <option id="allItems" value="" name="search"  >
               All Items
+        
             </option>
-            <option
-              id="homeAndGarden"
-              name="search"
-              value="homeAndGarden"
+              <option
+                id="homeAndGarden"
+                name="search"
+                value="homeAndGarden"
 
-            >
-              Home and Garden
+              >
+                Home and Garden
             </option>
-            <option id="electronics" name="search" value="electronics">
-              Electronics
+              <option id="electronics" name="search" value="electronics">
+                Electronics
             </option>
-            <option id="fashion" name="search" value="fashion">
-              Fashion
+              <option id="fashion" name="search" value="fashion">
+                Fashion
             </option>
-            <option
-              id="sportingGoods"
-              name="search"
-              value="sportingGoods"
-            >
-              Sporting Goods
+              <option
+                id="sportingGoods"
+                name="search"
+                value="sportingGoods"
+              >
+                Sporting Goods
             </option>
-            <option
-              id="businessIndustrial"
-              name="search"
-              value="businessIndustrial"
-            >
-              Business and Industrial
+              <option
+                id="businessIndustrial"
+                name="search"
+                value="businessIndustrial"
+              >
+                Business and Industrial
             </option>
           </select> */}
           {/* <button
             className="btn btn-outline-secondary"
+
             type="button"
             id="searchAlcBtn"
            
@@ -146,7 +149,7 @@ class Bid extends Component {
           >
             Search
           </button> */}
-        </div>
+
 
         {/* filter allows us to search by item name or category, but only first word of category (awk) */}
         {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
@@ -183,8 +186,11 @@ class Bid extends Component {
                         </p>
                         {/*Here goes delete function, alert tha notifies of successful purchase*/}
                         <button className="btn btn-outline-secondary" onClick={() => this.deleteItem(item._id)}>Buy Now</button>
+
                       </div>
+
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -193,6 +199,7 @@ class Bid extends Component {
           );
         })}
       </div>
+
     );
   }
 }
