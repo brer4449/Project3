@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export default {
   //
-  getAllItems: function (query){
+  getAllItems: function (){
     return axios.get("/api/items");
   },
  

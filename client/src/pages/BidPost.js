@@ -8,7 +8,9 @@ class Bid extends Component {
     this.state = {
       results: [],
       search: "",
-      items: []
+      items: [],
+      highestbid: []
+
     };
   }
 
@@ -31,7 +33,7 @@ class Bid extends Component {
       .catch(err => console.log(err));
   }
 
-
+  //Functions that displays all items by categories//
   displayData = query => {
     // if (!query){API.getAllItems()}    
     API.getCategoryItems(query)
@@ -45,15 +47,13 @@ class Bid extends Component {
 
   };
 
-  // searchData = query => {
-  //   API.getItem(query)
-  //     .then(res => {
-  //       this.setState({
-  //         results: res.data
-  //       });
-  //     })
-  //     .catch(err => console.log(err));
-  // };
+  //Function that delets items by ID//
+
+  deleteItem = (id) => {
+    API.deleteItem(id)
+      .then(res => this.displayAll())
+      .catch(err => console.log(err));
+  }
 
   handleInputChange = event => {
     const value = event.target.value;
@@ -70,6 +70,10 @@ class Bid extends Component {
     event.preventDefault();
     this.searchData(this.state.search);
   };
+
+  placeBid =()=>{
+  
+  }
 
   // handleBuyNow = event =>{
   //   event.preventDefault();
@@ -122,17 +126,19 @@ class Bid extends Component {
               >
                 Business and Industrial
             </option>
-            </select>
 
+          </select>
+          {/* <button
+            className="btn btn-outline-secondary"
 
-            {/* <button
-            className="btn btn-outline-secondary btn-large"
             type="button"
             id="searchAlcBtn"
+           
           // onChange={this.handleInputChange()}
           >
             Search
           </button> */}
+
 
 
           </div>
@@ -150,7 +156,7 @@ class Bid extends Component {
 
 
                     {/* <div className="row">
-  <div className="col-12"> */}
+              <div className="col-12"> */}
                     <div className="card item-card">
                       <div className="row">
 
@@ -198,6 +204,7 @@ class Bid extends Component {
 
         </div>
       </>
+
     );
   }
 }

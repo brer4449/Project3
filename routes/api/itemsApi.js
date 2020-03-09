@@ -15,10 +15,10 @@ router
 
 //Matches with "/api/items/:id"
 
-// router
-//   .route("/:id")
-//   .get(itemController.findById)
+router
+  .route("/:id")
+  
 //   .update(itemController.update)
-//   .delete(itemController.remove);
+  .delete(itemController.remove);
 
 module.exports = router;

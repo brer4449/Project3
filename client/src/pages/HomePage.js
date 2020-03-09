@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BidPost from "./BidPost";
-import PostPage from "./PostPage";
 import BackgroundPic from "../components/BackgroundPic/index"
 import Footer from "../components/Footer/index"
 
