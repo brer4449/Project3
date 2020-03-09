@@ -4,16 +4,25 @@ import Navbar from "../components/Navbar/index";
 import Footer from "../components/Footer";
 
 class PostPage extends Component {
+
+
   render() {
     return (
       <>
         <Navbar />
         <br />
-        <h3>Fill out a form to upload your product!</h3>
+       
         <br></br>
         <div className="container">
+        <div className="row">
+            <div className="col-md-6 offset-3">
+        <h3>Fill <span className="fun">out</span> a <span className="fun">form</span> to <span className="fun">upload</span> your <span className="fun">product</span>!</h3>
+        <hr/>
+        </div>
+        </div>
           <div className="row">
-            <div className="col-4 offset-4">
+            <div className="col-md-4 sm-12 offset-4">
+            
               <div className="card">
                 <form onSubmit={this.handleSubmit}>
                   <br></br>
@@ -55,19 +64,21 @@ class PostPage extends Component {
                   </div>
                   
                   <div class="form-row">
-                    <div class="form-group col-md-12">
-
+                    <div class="form-group col-md-12 ">
+                    <label htmlFor="img">Upload product image</label>
                       <div class="file-upload">
                         <div class="file-select">
 
-                          <label htmlFor="img"></label>
-                          <input id="img" name="img" type="file" />
-
+                          
+                         <input id="img" name="img" type="file" />
+                      
+                        
                         </div>
                       </div>
 
                     </div>
                   </div>
+                  <br></br>
 
                   <button className="postButton btn">Post Item!</button>
                   <br />

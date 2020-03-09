@@ -13,7 +13,7 @@ class Bid extends Component {
   }
 
   componentDidMount() {
-    if (this.query ) {
+    if (this.query) {
       this.displayData()
 
     }
@@ -42,7 +42,7 @@ class Bid extends Component {
         });
       })
       .catch(err => console.log(err));
-      
+
   };
 
   // searchData = query => {
@@ -78,94 +78,119 @@ class Bid extends Component {
 
   render() {
     return (
-      <div className="container">
+      <>
         <Navbar />
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1 className="display-4">Bid on Item</h1>
-            <p className="lead">Search through the items and place a bid!</p>
-          </div>
-        </div>
-        <div className="col-6">
-          <select className="itemSearch" name="search" onChange={this.handleInputChange}>
-            <option id="allItems" value="" name="search"  >
-              All Items
-            </option>
-            <option
-              id="homeAndGarden"
-              name="search"
-              value="homeAndGarden"
+        <br></br>
 
-            >
-              Home and Garden
+
+        <br></br>
+        <div className="container-fluid">
+
+          <form className="form-inline">
+            <div className="form-group col-6 offset-4">
+              <h3>Shop <span className="fun">by</span> category</h3>
+
+              <select className="itemSearch custom-select" name="search" onChange={this.handleInputChange}>
+                <option id="allItems" value="" name="search"  >
+                  ...
             </option>
-            <option id="electronics" name="search" value="electronics">
-              Electronics
+                <option
+                  id="homeAndGarden"
+                  name="search"
+                  value="homeAndGarden"
+
+                >
+                  Home and Garden
             </option>
-            <option id="fashion" name="search" value="fashion">
-              Fashion
+                <option id="electronics" name="search" value="electronics">
+                  Electronics
             </option>
-            <option
-              id="sportingGoods"
-              name="search"
-              value="sportingGoods"
-            >
-              Sporting Goods
+                <option id="fashion" name="search" value="fashion">
+                  Fashion
             </option>
-            <option
-              id="businessIndustrial"
-              name="search"
-              value="businessIndustrial"
-            >
-              Business and Industrial
+                <option
+                  id="sportingGoods"
+                  name="search"
+                  value="sportingGoods"
+                >
+                  Sporting Goods
             </option>
-          </select>
-          <button
-            className="btn btn-outline-secondary"
+                <option
+                  id="businessIndustrial"
+                  name="search"
+                  value="businessIndustrial"
+                >
+                  Business and Industrial
+            </option>
+              </select>
+
+
+              {/* <button
+            className="btn btn-outline-secondary btn-large"
             type="button"
             id="searchAlcBtn"
           // onChange={this.handleInputChange()}
           >
             Search
-          </button>
+          </button> */}
+
+
+            </div>
+          </form>
         </div>
+        <br></br>
 
         {this.state.results.map(item => {
           return (
-            <div className="card mb-3" style={{ width: "90%" }}>
-              <div className="row no-gutters">
-                <div className="col-md-4">
-                  <img src={item.image} className="card-img" alt="..." />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title">{item.itemname}</h5>
-                    <p className="card-text">{item.condition}</p>
-                    <div className="row">
-                      <div className ="col-md-4">
-                    <p className="card-text">
-                    Highest Bid         
-                      <small className="text-muted">{item.startingbid}</small>                                 
-                    </p>
-                    {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                    <button className ="btn btn-outline-secondary" type="text" onChange ={this.handleBidSubmit}>Bid</button>
+
+            <div className="container">
+               <div className="row">
+                <div class="col-md-4">
+
+                  <div className="card item-card col-12">
+                    <div className="row no-gutters">
+
+                      <div className="col-md-4">
+                        <h5 className="card-title">{item.itemname}</h5>
+                        <img src={item.image} className="card-img" alt="..." />
+                      </div>
+                      <br></br>
+                      <div className="content">
+                      
+                        <ul>
+                          <br></br>
+                          <li><strong>Condition:</strong> {item.condition}</li>
+                          <br></br>
+                          <li><strong>Current bid: $ </strong>{item.startingbid}</li>
+                          <br></br>
+                          <li><strong>Buyout price: $ </strong>{item.buyout} </li>
+                        </ul>
+
+
+                        {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
+                        <form className="form-inline">
+                          <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
+
+                        
+                          {/*Here goes delete function, alert tha notifies of successful purchase*/}
+                          <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
+                        </form>
+                      </div>
                     </div>
-                    <div className ="col-md-4">
-                    <p className="card-text">
-                    Buy Now
-                      <small className="text-muted">{item.buyout}</small>                     
-                    </p>
-                    {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                    <button className ="btn btn-outline-secondary" onClick ={this.handleBuyNow}>Buy Now</button>
-                    </div>
-                    </div>                       
+                   
                   </div>
+                  
                 </div>
               </div>
+             
+              
             </div>
+            
           );
         })}
-      </div>
+
+
+      </>
     );
   }
 }

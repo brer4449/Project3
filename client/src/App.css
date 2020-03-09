@@ -7,60 +7,87 @@ h1 {
 }
 
 .card{
-  border-color: lightgray;
+  border-color: orange;
   padding: 10px;
   line-height: 1rem;
-
 }
 
 h3{
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color:red;
+  color: orange;
   text-align: center;
 }
 
-.navbar{
-  color:red;
+h5{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: orange;
 }
+
+hr{
+  background-color:rgb(14, 99, 124);
+}
+
+.itemSearch {
+  margin-left: 10px;
+}
+
 
 label{
   font-family: 'Times New Roman', Times, serif;
+  color:rgb(14, 99, 124);
   
 }
 .postButton {
   display: block;
   margin: 0 auto;
-  background-color: red;
-  color:white;
+  background-color: rgb(14, 99, 124);
+  color:orange;
+  font-weight: bold;
 }
 
-img{
-  height:200px;
-  width:100px;
-  margin-top: 40px;
+
+.buy {
   margin-left:10px;
 }
 
-.file-upload{
-  display:block;
-  text-align:center;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;}
+.item-card{
+  border-color:  rgb(14, 99, 124);
+}
 
+img{
+  height:100px;
+}
 
-.file-upload .file-select{
-  display:block;border: 
-  2px solid #dce4ec;
-  color: #34495e;
+.bid{
+  margin-left:20px;
+}
+
+.file-select {
+  border: 2px solid #dce4ec;
+  background:#34495e;
   cursor:pointer;
-  height:40px;
-  line-height:40px;
-  text-align:left;
+  line-height:2rem;
   background:#dce4ec;
-  overflow:hidden;
-  position:relative;}
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+}
 
-.file-select-button{
-  background:#dce4ec;
-  padding:0 10px;
+
+.file-upload .file-select:hover{border-color:#34495e;}
+
+.file-upload .file-select:hover {background-color:#34495e;}
+
+.fun{
+  color: rgb(14, 99, 124);
+}
+
+option{
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(14, 99, 124);
+}
+
+li{
+list-style: none;
+font-family: Arial, Helvetica, sans-serif ;
+color:  rgb(14, 99, 124);
 }
