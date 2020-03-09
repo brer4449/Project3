@@ -8,7 +8,9 @@ class Bid extends Component {
     this.state = {
       results: [],
       search: "",
-      items: []
+      items: [],
+      highestbid:[]
+
     };
   }
 
@@ -31,7 +33,7 @@ class Bid extends Component {
       .catch(err => console.log(err));
   }
 
-
+  //Functions that displays all items by categories//
   displayData = query => {
     // if (!query){API.getAllItems()}    
     API.getCategoryItems(query)
@@ -45,15 +47,13 @@ class Bid extends Component {
       
   };
 
-  // searchData = query => {
-  //   API.getItem(query)
-  //     .then(res => {
-  //       this.setState({
-  //         results: res.data
-  //       });
-  //     })
-  //     .catch(err => console.log(err));
-  // };
+  //Function that delets items by ID//
+
+   deleteItem=(id)=> {
+    API.deleteItem(id)
+      .then(res => this.displayAll(), ()=> alert("Congratulations on your purchase!"))
+      .catch(err => console.log(err));
+  }
 
   handleInputChange = event => {
     const value = event.target.value;
@@ -156,7 +156,7 @@ class Bid extends Component {
                       <small className="text-muted">{item.buyout}</small>                     
                     </p>
                     {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                    <button className ="btn btn-outline-secondary" onClick ={this.handleBuyNow}>Buy Now</button>
+                    <button className ="btn btn-outline-secondary" onClick ={()=> this.deleteItem(item._id)}>Buy Now</button>
                     </div>
                     </div>                       
                   </div>
