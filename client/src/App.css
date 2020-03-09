@@ -1,37 +1,29 @@
 h1 {
   text-align: center;
 }
-
 .choice {
   text-align: center;
 }
-
 .card{
   border-color: orange;
   padding: 10px;
   line-height: 1rem;
 }
-
 h3{
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: orange;
   text-align: center;
 }
-
 h5{
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: orange;
 }
-
 hr{
   background-color:rgb(14, 99, 124);
 }
-
 .itemSearch {
   margin-left: 10px;
 }
-
-
 label{
   font-family: 'Times New Roman', Times, serif;
   color:rgb(14, 99, 124);
@@ -44,35 +36,26 @@ label{
   color:orange;
   font-weight: bold;
 }
-
-
 .buy {
   margin-left:10px;
 }
-
 .item-card{
   border-color:  rgb(14, 99, 124);
-
 }
-
 .card-title{
   color: orange;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .card-img{
   height:100px;
 }
-
 .bot{
   height:300px;
 }
-
 .bid{
   margin-left:20px;
 }
-
 .file-select {
   border: 2px solid #dce4ec;
   background:#34495e;
@@ -82,29 +65,21 @@ label{
   font-family: 'Times New Roman', Times, serif;
   font-size: 14px;
 }
-
-
 .file-upload .file-select:hover{border-color:#34495e;}
-
 .file-upload .file-select:hover {background-color:#34495e;}
-
 .fun{
   color: rgb(14, 99, 124);
 }
-
 option{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(14, 99, 124);
 }
-
 li{
 list-style: none;
 font-family: Arial, Helvetica, sans-serif ;
 color:  rgb(14, 99, 124);
 }
-
 .bid{
  float:left;
  margin-left:-100px;
 }
-

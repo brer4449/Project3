@@ -72,6 +72,7 @@ function PostPage() {
 
                   </div>
 
+
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label htmlFor="startingbid">Starting Price</label>
@@ -83,6 +84,7 @@ function PostPage() {
                       <input id="buyout" name="buyout" type="buyout" class="form-control" onChange ={handleInputChange} />
                     </div>
                     
+
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
