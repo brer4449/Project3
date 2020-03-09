@@ -114,7 +114,7 @@ mongoose.connect(
     {
         _id: 12,
         image: "/images/electronics4.jpg",
-        itemname: "LG Smart TV",
+        itemname: "Smart TV",
         startingbid: 550,
         buyout: 1000,
         category: "electronics",
@@ -160,7 +160,7 @@ mongoose.connect(
     {
         _id: 17,
         image: "/images/fashion1.jpg",
-        itemname: "Movado women's watch",
+        itemname: "Women's watch",
         startingbid: 50,
         buyout: 125,
         category: "fashion",
@@ -178,7 +178,7 @@ mongoose.connect(
     {
         _id: 19,
         image: "/images/fashion3.jpg",
-        itemname: "Burberry women's scarf",
+        itemname: "Burberry scarf",
         startingbid: 160,
         buyout: 275,
         category: "fashion",
@@ -187,7 +187,7 @@ mongoose.connect(
     {
         _id: 20,
         image: "/images/fashion4.jpg",
-        itemname: "Gucci women's bag",
+        itemname: "Women's bag",
         startingbid: 800,
         buyout: 1400,
         category: "fashion",
@@ -251,7 +251,7 @@ mongoose.connect(
     {
         _id: 27,
         image: "/images/sport3.jpg",
-        itemname: "American football ball",
+        itemname: "Football ball",
         startingbid: 30,
         buyout: 80,
         category: "sportingGoods",
@@ -324,7 +324,7 @@ mongoose.connect(
 {
     _id: 35,
     image: "/images/business3.jpg",
-    itemname: "Sustainable moving boxes",
+    itemname: "Moving cubicles",
     startingbid: 400,
     buyout: 950,
     category: "businessIndustrial",

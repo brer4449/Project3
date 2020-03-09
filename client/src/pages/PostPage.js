@@ -77,7 +77,7 @@ function PostPage() {
                       <input id="startPrice" name="startPrice" type="startPrice" class="form-control" onChange ={handleInputChange} />
                     </div>
                     <div class="form-group col-md-12">
-                      <label htmlFor="startPrice">Buy Now</label>
+                      <label htmlFor="startPrice">Buy out price</label>
                       <input id="startPrice" name="startPrice" type="startPrice" class="form-control" onChange ={handleInputChange} />
                     </div>
                   </div>

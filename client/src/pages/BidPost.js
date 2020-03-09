@@ -71,8 +71,8 @@ class Bid extends Component {
     this.searchData(this.state.search);
   };
 
-  placeBid =()=>{
-  
+  placeBid = () => {
+
   }
 
   // handleBuyNow = event =>{
@@ -88,7 +88,6 @@ class Bid extends Component {
 
 
         <br></br>
-        {/* <div className="container-fluid"> */}
 
         <form className="form-inline">
           <div className="form-group col-6 offset-4">
@@ -126,11 +125,11 @@ class Bid extends Component {
               >
                 Business and Industrial
             </option>
+            </select>
 
-          </select>
-          {/* <button
-            className="btn btn-outline-secondary"
 
+            {/* <button
+            className="btn btn-outline-secondary btn-large"
             type="button"
             id="searchAlcBtn"
            
@@ -140,28 +139,25 @@ class Bid extends Component {
           </button> */}
 
 
-
           </div>
         </form>
-        {/* </div> */}
+
         <br></br>
 
         <div className="container">
           <div className="row">
-            <div className="col-4">
-
-              {this.state.results.map(item => {
-                return (
-                  <>
 
 
-                    {/* <div className="row">
-              <div className="col-12"> */}
+            {this.state.results.map(item => {
+              return (
+                <>
+
+                  <div className="col-4 sm-12">
                     <div className="card item-card">
                       <div className="row">
 
                         <div className="col-4">
-                          <h5 className="card-title">{item.itemname}</h5>
+                          <nav className="card-title">{item.itemname}</nav>
                           <img src={item.image} className="card-img" alt="..." />
                         </div>
                         <br></br>
@@ -174,37 +170,47 @@ class Bid extends Component {
                             <li><strong>Current bid: $ </strong>{item.startingbid}</li>
                             <br></br>
                             <li><strong>Buyout price: $ </strong>{item.buyout} </li>
+                            
                           </ul>
-
-
+                          <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
+<br></br><br></br>
                           {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                          <form className="form-inline">
-                            <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
+                           {/*Here goes delete function, alert tha notifies of successful purchase*/}
+                              
+                          <form>
+                            <div class="form-row">
+                              <div class="form-group">
+                                <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
+                               
+                              </div>
 
-
-                            {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                            <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
+                              <div className="form-group col-md-8">
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" />
+                              </div>
+                             
+                            </div>
                           </form>
+
+                         
                         </div>
+
                       </div>
 
                     </div>
-                    {/* </div> */}
+                    <br></br>
+                  </div>
 
-                    {/* </div> */}
+
+                </>
+              );
+            })}
 
 
-                  </>
-                );
-              })}
-
-            </div>
           </div>
 
 
         </div>
       </>
-
     );
   }
 }
