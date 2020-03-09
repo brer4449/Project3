@@ -2,17 +2,11 @@ import API from "../utils/API";
 import React, { useState, useEffect, useReducer } from "react";
 import Navbar from "../components/Navbar/index";
 import Footer from "../components/Footer";
-import Dropzone from 'react-dropzone'
 
 function PostPage() {
   // Setting our component's initial state
   const [Items, setItems] = useState([])
   const [formObject, setFormObject] = useState({})
-  const [selectFile, setSelectFile] = useState({})
-
-  function onDrop(acceptedFiles) {
-    console.log(acceptedFiles);
-  }
 
   // Load all items and store them with setItems
   useEffect(() => {
@@ -109,20 +103,8 @@ function PostPage() {
                       </select>
                     </div>
                   </div>
-                  <Dropzone
-                    onDrop={this.onDrop}
-                    accept="image/png"
-                  >
-                    {({getRootProps, getInputProps, isDragActive, isDragReject}) => (
-                      <div {...getRootProps()}>
-                        <input {...getInputProps()} />
-                        {!isDragActive && 'Click here or drop a file to upload!'}
-                        {isDragActive && !isDragReject && "Drop it like it's hot!"}
-                        {isDragReject && "File type not accepted, sorry!"}
-                      </div>
-                    )}
-                  </Dropzone>
-                  {/* <div class="form-row">
+                  
+                  <div class="form-row">
                     <div class="form-group col-md-12 ">
                     <label htmlFor="img">Upload product image</label>
                       <div class="file-upload">
@@ -131,7 +113,7 @@ function PostPage() {
                         </div>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                   <br></br>
 
                   <button id="myForm" className="postButton btn" onClick={handleSubmit}>Post Item!</button>
