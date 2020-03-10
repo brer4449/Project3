@@ -70,19 +70,20 @@ class Bid extends Component {
     );
   };
 
-  handleBidSubmit = event => {
+  handleBidSubmit = (event, id) => {
     event.preventDefault();
-    this.searchData(this.state.search);
+    API.updateBid(id, { startingbid: this.state.highestbid })
+      .then(res => {
+     
+        console.log(res.data)
+      })
   };
 
-  placeBid = () => {
-
+  handleBuyNow = async item => {
+    await this.deleteItem(item._id)
+    alert(`Congratulations you are now the proud owner of a ${item.itemname}`)
   }
-
-  // handleBuyNow = event =>{
-  //   event.preventDefault();
-  //   this.state.search
-  // }
+  
 
   render() {
     return (
@@ -175,45 +176,38 @@ class Bid extends Component {
                           
             <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>
                           <br></br><br></br>
-=======
+
                          
                          <button className="btn btn-outline-secondary bid" type="text" onClick={(e) => this.handleBidSubmit(e, item.itemname)}>Place bid</button>
 
                           {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                          {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                          
-                         
+                          {/*Here goes delete function, alert tha notifies of successful purchase*/}    
 
                           <form>
-
-
                             <div class="form-row">
                              <div className="form-group col-md-8">
                                 <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange} />
 
-                              </div>
-
-
-                          
-                          
-                                
-                              </div>
-                                           
-
+                              </div>                            
                             </div>
-                          </form>
-
+                         </form>
+                            </div>
                         </div>
                       </div>
+                      <br></br>
                     </div>
-                    <br></br>
-                  </div>
+                    
+                  
                 </>
 
               );
             })}
           </div>
+        
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
         <Footer />
       </>
     );

@@ -14,6 +14,9 @@ export default {
     return axios.get("/api/items?category="+query);
   },
 
+  updateBid: function(id, bidData){
+    return axios.put("/api/items/"+id, bidData);
+  },
 
   // getCategory: function(query) {
   //   return axios.get("/api/items?category"+query)
