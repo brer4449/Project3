@@ -170,18 +170,35 @@ class Bid extends Component {
                             <li><strong>Buyout price: $ </strong>{item.buyout} </li>
 
                           </ul>
-                          <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>
-                            Buy Now</button>
+
+
+                          
+            <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>
                           <br></br><br></br>
+=======
+                         
+                         <button className="btn btn-outline-secondary bid" type="text" onClick={(e) => this.handleBidSubmit(e, item.itemname)}>Place bid</button>
+
                           {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
                           {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                          <button className="btn btn-outline-secondary bid"  onChange={this.handleBidSubmit}> Place bid</button>
+                          
+                         
+
                           <form>
 
+
                             <div class="form-row">
-                              <div className="form-group col-md-8">
-                                <input type="text" class="form-control" id="bid-input" placeholder="type amount..." />
+                             <div className="form-group col-md-8">
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange} />
+
                               </div>
+
+
+                          
+                          
+                                
+                              </div>
+                                           
 
                             </div>
                           </form>
