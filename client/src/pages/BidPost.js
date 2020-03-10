@@ -10,7 +10,8 @@ class Bid extends Component {
       results: [],
       search: "",
       items: [],
-      highestbid: []
+      highestbid: [],
+      buyOut:[]
 
     };
   }
@@ -28,7 +29,8 @@ class Bid extends Component {
       .then(res => {
         console.log(res.data)
         this.setState({
-          results: res.data
+          results: res.data,
+          buyOut:res.data.buyout
         });
       })
       .catch(err => console.log(err));
@@ -42,6 +44,7 @@ class Bid extends Component {
         console.log(res.data)
         this.setState({
           results: res.data
+
         });
       })
       .catch(err => console.log(err));
@@ -68,13 +71,20 @@ class Bid extends Component {
 
   handleBidSubmit = (event, id) => {
     event.preventDefault();
+    // this.state.results.map(item =>{
+    //   // console.log(item)
+    const bid = this.state.highestbid;
+    const buyPrice = parseInt(this.state.buyOut);
+    
+    console.log(bid);
+    console.log(buyPrice)
+    
    
     API.updateBid(id, { startingbid: this.state.highestbid })
-      .then(res => {window.location.reload(false);
-     
-        alert("Your bid of $" + this.state.highestbid + " was accepted!")
-        
+      .then(res => { alert("Your bid of $" + this.state.highestbid + " was accepted!");
+      window.location.reload(false);        
       })
+    // })
   };
 
   
@@ -152,7 +162,7 @@ class Bid extends Component {
               return (
                 <>
                   <div className="col-4 sm-12">
-                    <div className="card item-card">
+                    <div className="card item-card sm-12">
                       <div className="row">
                         <div className="col-4">
                           <nav className="card-title">{item.itemname}</nav>
@@ -194,15 +204,11 @@ class Bid extends Component {
                         </div>
                       </div>
                       <br></br>
-                    </div>
-                    
-                  
+                    </div>                
                 </>
-
               );
             })}
-          </div>
-        
+          </div>        
         </div>
         <br></br>
         <br></br>
