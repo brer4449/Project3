@@ -5,6 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <span>BidBot ©2020</span>
+    
     </footer>
   );
 }

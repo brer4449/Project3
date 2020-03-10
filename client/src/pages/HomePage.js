@@ -3,20 +3,42 @@ import { Link } from "react-router-dom";
 import BackgroundPic from "../components/BackgroundPic/index"
 import Footer from "../components/Footer/index"
 
+
+
 function Home() {
   return (
     <div>
-
-      {/* <BackgroundPic backgroundImage="https://cdn2.vectorstock.com/i/1000x1000/37/36/abstract-blue-waves-on-black-background-vector-15103736.jpg"> */}
-      <h1></h1>
       <br></br>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
 
-      <h4 className="choice">
-        <Link to="./BidPost">Bid</Link> | <Link to="./PostPage">Post</Link>
-      </h4>
-      <img src="/images/bot.png" className="bot" alt="bidbot logo" />
-      {/*       
-      </BackgroundPic> */}
+            <div class="card text-center">
+              <div class="card-header home1">
+               <h1>Search, Post <span className="fun2">&</span> Bid </h1>
+              
+               <img src="/images/act.png" width="100px" height="100px" className="pic2" />
+              </div>
+             
+              <div class="card-body home">
+            
+              {/* <BackgroundPic backgroundImage="https://t4.ftcdn.net/jpg/00/99/17/81/240_F_99178133_4oUPBVYO1y7Py4M6otxiyfD9aSNLz3Vu.jpg" height="100px"/> */}
+              <img src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg" width="300px" height="150px" className="pic"/>
+              <br></br><br></br>
+              <h2>Explore our collections</h2>
+            <h3>Bid and Save</h3>
+           
+            
+              </div>
+             
+              <div class="card-footer">
+            
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );
