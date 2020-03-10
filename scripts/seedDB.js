@@ -12,7 +12,6 @@ mongoose.connect(
 const itemSeed = [
     // Home and garden
     {
-        _id: 1,
         image: "/images/home1.jpg",
         itemname: "Laundry Machine",
         startingbid: 200,
@@ -21,7 +20,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 2,
         image: "/images/home2.jpg",
         itemname: "Massage Chair",
         startingbid: 500,
@@ -30,7 +28,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 3,
         image: "/images/home3.jpg",
         itemname: "Gas Stove",
         startingbid: 800,
@@ -39,7 +36,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 4,
         image: "/images/home4.jpg",
         itemname: "Coffee Machine",
         startingbid: 300,
@@ -48,7 +44,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 5,
         image: "/images/home5.jpg",
         itemname: "Patio Set",
         startingbid: 40,
@@ -57,7 +52,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 6,
         image: "/images/home6.jpg",
         itemname: "Lawn Machine",
         startingbid: 600,
@@ -66,7 +60,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 7,
         image: "/images/home7.jpg",
         itemname: "Couch",
         startingbid: 100,
@@ -75,7 +68,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 8,
         image: "/images/home8.jpg",
         itemname: "Dining Set",
         startingbid: 50,
@@ -85,7 +77,6 @@ const itemSeed = [
     },
     // Electronics
     {
-        _id: 9,
         image: "/images/electronics1.jpg",
         itemname: "iPhone 10",
         startingbid: 300,
@@ -94,7 +85,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 10,
         image: "/images/electronics2.jpg",
         itemname: "Lenovo Laptop",
         startingbid: 500,
@@ -103,7 +93,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 11,
         image: "/images/electronics3.jpg",
         itemname: "Apple Tablet",
         startingbid: 150,
@@ -112,7 +101,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 12,
         image: "/images/electronics4.jpg",
         itemname: "LG Smart TV",
         startingbid: 550,
@@ -121,7 +109,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 13,
         image: "/images/electronics5.jpg",
         itemname: "Speakers",
         startingbid: 30,
@@ -130,7 +117,6 @@ const itemSeed = [
         condition: "Bad"
     },
     {
-        _id: 14,
         image: "/images/electronics6.jpg",
         itemname: "Robotic Vacuum",
         startingbid: 600,
@@ -139,7 +125,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 15,
         image: "/images/electronics7.jpg",
         itemname: "Vacuum Cleaner",
         startingbid: 85,
@@ -148,7 +133,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 16,
         image: "/images/electronics8.jpg",
         itemname: "Blender",
         startingbid: 30,
@@ -158,7 +142,6 @@ const itemSeed = [
     },
     // Fashion
     {
-        _id: 17,
         image: "/images/fashion1.jpg",
         itemname: "Movado Women's Watch",
         startingbid: 50,
@@ -167,7 +150,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 18,
         image: "/images/fashion2.jpg",
         itemname: "Women's Ring",
         startingbid: 600,
@@ -176,7 +158,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 19,
         image: "/images/fashion3.jpg",
         itemname: "Burberry Women's Scarf",
         startingbid: 160,
@@ -185,7 +166,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 20,
         image: "/images/fashion4.jpg",
         itemname: "Gucci Women's Bag",
         startingbid: 800,
@@ -194,7 +174,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 21,
         image: "/images/fashion5.jpg",
         itemname: "Women's Coat",
         startingbid: 80,
@@ -203,7 +182,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 22,
         image: "/images/fashion6.jpg",
         itemname: "Men's Bracelet",
         startingbid: 300,
@@ -212,7 +190,6 @@ const itemSeed = [
         condition: "Used"
     },
     {
-        _id: 23,
         image: "/images/fashion7.jpg",
         itemname: "Men's Bag",
         startingbid: 180,
@@ -221,7 +198,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 24,
         image: "/images/fashion8.jpg",
         itemname: "Men's Coat",
         startingbid: 60,
@@ -231,7 +207,6 @@ const itemSeed = [
     },
     // Sporting goods
     {
-        _id: 25,
         image: "/images/sport1.jpg",
         itemname: "Bicycle",
         startingbid: 1500,
@@ -240,7 +215,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 26,
         image: "/images/sport2.jpg",
         itemname: "Boxing Gloves",
         startingbid: 40,
@@ -249,7 +223,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 27,
         image: "/images/sport3.jpg",
         itemname: "American Football",
         startingbid: 30,
@@ -258,7 +231,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 28,
         image: "/images/sport4.jpg",
         itemname: "Snowboard",
         startingbid: 200,
@@ -267,7 +239,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 29,
         image: "/images/sport5.jpg",
         itemname: "Sports Bag",
         startingbid: 60,
@@ -276,7 +247,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 30,
         image: "/images/sport6.jpg",
         itemname: "Golf Set",
         startingbid: 200,
@@ -285,7 +255,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 31,
         image: "/images/sport7.jpg",
         itemname: "Ski Suit",
         startingbid: 80,
@@ -294,7 +263,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 32,
         image: "/images/sport8.jpg",
         itemname: "Sports Glasses",
         startingbid: 60,
@@ -304,7 +272,6 @@ const itemSeed = [
     },
     // businessIndustrial
     {
-        _id: 33,
         image: "/images/business1.jpg",
         itemname: "Printer",
         startingbid: 80,
@@ -313,7 +280,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 34,
         image: "/images/business2.jpg",
         itemname: "Office Desk",
         startingbid: 150,
@@ -322,7 +288,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 35,
         image: "/images/business3.jpg",
         itemname: "Cubicle?",
         startingbid: 400,
@@ -331,7 +296,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 36,
         image: "/images/business4.jpg",
         itemname: "Cash Register",
         startingbid: 2000,
@@ -340,7 +304,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 37,
         image: "/images/business5.jpg",
         itemname: "Safe",
         startingbid: 1300,
@@ -349,7 +312,6 @@ const itemSeed = [
         condition: "Good"
     },
     {
-        _id: 38,
         image: "/images/business6.jpg",
         itemname: "Fingerprint Scanner",
         startingbid: 1200,
@@ -358,7 +320,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 39,
         image: "/images/business7.jpg",
         itemname: "Payment Machine",
         startingbid: 900,
@@ -367,7 +328,6 @@ const itemSeed = [
         condition: "New"
     },
     {
-        _id: 40,
         image: "/images/business8.jpg",
         itemname: "Shredder",
         startingbid: 400,

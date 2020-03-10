@@ -6,16 +6,19 @@ const itemController = require("../../controllers/itemController");
 router
   .route("/")
   .get(itemController.findAll)
-  .get(itemController.findCategory)
+  //can't have more than 1 of the same CRUD type
+  // .get(itemController.findCategory)
   .post(itemController.create);
 
-  router.
-    route("/?")
-    .get(itemController.findCategory);
+router.
+  route("/?")
+  .get(itemController.findCategory);
 
 //Matches with "/api/items/:id"
 
+
 router
+
   .route("/:id")  
   .put(itemController.update)
   .delete(itemController.remove);

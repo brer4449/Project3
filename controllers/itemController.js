@@ -4,8 +4,8 @@ const db = require("../models");
 // Defining methods for the auctionController
 module.exports = {
 
-    //**Get **/
-  findAll: function(req, res) {
+  //**Get **/
+  findAll: function (req, res) {
     console.log(req.query)
     db.Items
       .find(req.query)
@@ -14,7 +14,7 @@ module.exports = {
   },
 
 
-  findCategory: function(req, res) {
+  findCategory: function (req, res) {
     console.log(req.query)
     db.Items
       .find(req.query)
@@ -23,7 +23,7 @@ module.exports = {
   },
 
   //???????????????//
-  findById: function(req, res) {
+  findById: function (req, res) {
     db.Items
 
       .findById(req.params.id)
@@ -34,7 +34,7 @@ module.exports = {
   //*************** */
 
   ////Post******//
-  create: function(req, res) {
+  create: function (req, res) {
     console.log("post item");
     console.log(req.body);
     db.Items
@@ -43,16 +43,18 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
+
   update: function(req, res) {
     console.log(req.params, req.body)
     db.Items
       .findOneAndUpdate({itemname: req.params.id }, req.body)
+
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
 
-//Delete//
-  remove: function(req, res) {
+  //Delete//
+  remove: function (req, res) {
     db.Items
 
       .findById({ _id: req.params.id })

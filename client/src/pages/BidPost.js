@@ -23,7 +23,7 @@ class Bid extends Component {
   }
 
   displayAll = () => {
-    API.getAllItems()
+    return API.getAllItems()
       .then(res => {
         // console.log(res.data)
         this.setState({
@@ -33,6 +33,7 @@ class Bid extends Component {
       .catch(err => console.log(err));
   }
 
+  //Do we need this? since Brendan's search grabs by item name or category
   //Functions that displays all items by categories//
   displayData = query => {
     // if (!query){API.getAllItems()}    
@@ -49,8 +50,8 @@ class Bid extends Component {
 
   //Function that deletes items by ID//
 
-  deleteItem = (id) => {
-    API.deleteItem(id)
+  deleteItem = async (id) => {
+    return await API.deleteItem(id)
       .then(res => this.displayAll())
       .catch(err => console.log(err));
   }
@@ -69,6 +70,7 @@ class Bid extends Component {
     );
   };
 
+
   handleBidSubmit = (event, id) => {
     event.preventDefault();
     API.updateBid(id,  {startingbid: this.state.highestbid})
@@ -77,105 +79,102 @@ class Bid extends Component {
       console.log(res.data)
 
     })
+
   };
 
 
 
-  // handleBuyNow = event =>{
-  //   event.preventDefault();
-  //   this.state.search
-  // }
+  handleBuyNow = async item => {
+    await this.deleteItem(item._id)
+    alert(`Congratulations you are now the proud owner of a ${item.itemname}`)
+  }
 
   render() {
     return (
       <>
         <Navbar />
-        <br></br>        
         <br></br>
-       
-        
-        <div className="col-6">
-          <input
-            className="input"
-            placeholder="Search by Item Name or Category Here"
-            type="text"
-            onChange={this.handleInputChange.bind(this)}
-            name="search"
-            value={this.state.search}
-            style={{ width: 285 }}
-          ></input>
-          </div>
-          {/* Commented out dropdown, didn't want to delete */}
-          <form className="form-inline">
+        <br></br>
+        <form className="form-inline">
           <div className="form-group col-6 offset-4">
+            <div className="col-6">
+              <input
+                className="input"
+                placeholder="Search by Item Name or Category Here"
+                type="text"
+                onChange={this.handleInputChange.bind(this)}
+                name="search"
+                value={this.state.search}
+                style={{ width: 285 }}
+              ></input>
+            </div>
             <h3>Shop <span className="fun">by</span> category</h3>
-          <select className="itemSearch" name="search" onChange={this.handleInputChange}>
-            <option id="allItems" value="" name="search"  >
-              All Items
-        
-            </option>
+            <select className="itemSearch" name="search" onChange={this.handleInputChange}>
+              <option id="allItems" value="" name="search"  >
+                All Items
+
+              </option>
               <option
                 id="homeAndGarden"
                 name="search"
                 value="homeAndGarden"
               >
                 Home and Garden
-            </option>
+              </option>
               <option id="electronics" name="search" value="electronics">
                 Electronics
-            </option>
+              </option>
               <option id="fashion" name="search" value="fashion">
                 Fashion
-            </option>
+              </option>
               <option
                 id="sportingGoods"
                 name="search"
                 value="sportingGoods"
               >
                 Sporting Goods
-            </option>
+              </option>
               <option
                 id="businessIndustrial"
                 name="search"
                 value="businessIndustrial"
               >
                 Business and Industrial
-            </option>
-          </select> 
+              </option>
+            </select>
           </div>
-         </form>
-        {/* filter allows us to search by item name or category, but only first word of category (awk) */}
+        </form>
 
+        {/* filter allows us to search by item name or category, but only first word of category (awk) */}
         <div className="container">
           <div className="row">
 
+            {this.state.results.filter(item => (item.itemname).toLowerCase().includes(this.state.search.toLowerCase()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
+              return (
+                <>
+                  <div className="col-4 sm-12" key={item._id}>
+                    <div className="card item-card">
+                      <div className="row">
+                        <div className="col-8">
+                          <nav className="card-title" >{item.itemname}</nav>
+                          <img src={item.image} className="card-img" alt="image of product for sale" />
+                        </div>
+                        <br />
+                        <div className="content">
+                          <ul>
+                            <br />
+                            <li><strong>Condition:</strong> {item.condition}</li>
+                            <br />
+                            <li><strong>Current bid: $ </strong>{item.startingbid}</li>
+                            <br />
+                            <li><strong>Buyout price: $ </strong>{item.buyout} </li>
+                          </ul>
+                          <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>
+                          <br /><br />
+                          {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
+                          {/*Here goes delete function, alert that notifies of successful purchase*/}               
 
-        {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
-          return (
-            <>
-            <div className="col-4 sm-12">
-            <div className="card item-card">
-              <div className="row">
-                <div className="col-4">
-                  <nav className="card-title">{item.itemname}</nav>
-                  <img src={item.image} className="card-img" alt="..." />
-                </div>
-                <br></br>
-                <div className="content">
-                  <ul>
-                    <br></br>
-                    <li><strong>Condition:</strong> {item.condition}</li>
-                    <br></br>
-                    <li><strong>Current bid: $ </strong>{item.startingbid}</li>
-                    <br></br>
-                    <li><strong>Buyout price: $ </strong>{item.buyout} </li>
-                    
-                  </ul>
-                  <button className="btn btn-outline-secondary buy" onClick={this.handleBuyNow}>Buy Now</button>
-<br></br><br></br>
-                  {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                   {/*Here goes delete function, alert tha notifies of successful purchase*/}
-                      
+
                   <form>
                     <div class="form-row">
                       <div class="form-group">
@@ -184,24 +183,17 @@ class Bid extends Component {
                       </div>
                       <div className="form-group col-md-8">
                         <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange}/>
-                      </div>
-                     
-                    </div>
-                  </form>
-                 
-                </div>
-              </div>
-            </div>
-            <br></br>
-          </div>
-            </>
 
-          );
-        })}
-      </div>
-      </div>
-      
-        </>
+                      </div>
+                    </div>
+                    <br />
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        </div>
+      </>
     );
   }
 }
