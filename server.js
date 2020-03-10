@@ -21,25 +21,25 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");
 
 //Upload Endpoint -- endpoint we want to send a request to from react and send along our file
-app.post("/api/items", (req, res) => {
-  // req.files is used to access uploaded file (via express-upload)
-  if (req.files === null) {
-    return res.status(400).json({ msg: "No File was Uploaded" })
-  }
+// app.post("/api/items", (req, res) => {
+//   // req.files is used to access uploaded file (via express-upload)
+//   if (req.files === null) {
+//     return res.status(400).json({ msg: "No File was Uploaded" })
+//   }
 
-  // We define the .file in react
-  const file = req.files.file
-  //This is how we move the file to the right directory (where we want to put that file)
-  file.mv(`${__dirname}/client/public/images/${file.name}`, err => {
-    //If the path doesn't exist, send a server error and the error itself
-    if (err) {
-      console.error(err)
-      return res.status(500).send(err)
-    }
+//   // We define the .file in react
+//   const file = req.files.file
+//   //This is how we move the file to the right directory (where we want to put that file)
+//   file.mv(`${__dirname}/client/public/images/${file.name}`, err => {
+//     //If the path doesn't exist, send a server error and the error itself
+//     if (err) {
+//       console.error(err)
+//       return res.status(500).send(err)
+//     }
 
-    res.json({ fileName: file.name, filePath: `/images/${file.name}` })
-  })
-})
+//     res.json({ fileName: file.name, filePath: `/images/${file.name}` })
+//   })
+// })
 // Start the API server
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

@@ -81,5 +81,5 @@ color:  rgb(14, 99, 124);
 }
 .bid{
  float:left;
- margin-left:-100px;
+ /* margin-left:-100px; */
 }
