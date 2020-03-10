@@ -43,10 +43,12 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-  //Update
-  update: function (req, res) {
+
+  update: function(req, res) {
+    console.log(req.params, req.body)
     db.Items
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({itemname: req.params.id }, req.body)
+
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

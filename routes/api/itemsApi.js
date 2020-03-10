@@ -18,8 +18,8 @@ router.
 
 
 router
-  .route("/:id")
 
+  .route("/:id")  
   .put(itemController.update)
   .delete(itemController.remove);
 

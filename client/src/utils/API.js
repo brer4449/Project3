@@ -17,9 +17,11 @@ export default {
 
   // getCategory: function(query) {
   //   return axios.get("/api/items?category"+query)
-
-
-
+    
+    updateBid: function(id, bidData){
+      return axios.put("/api/items/"+id, bidData);
+    },
+ 
   // Gets the item with the given id
   getItem: function (id) {
     return axios.get("/api/items/" + id);

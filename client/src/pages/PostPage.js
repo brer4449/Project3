@@ -158,7 +158,7 @@ function PostPage() {
           </div>
           <br />
         </div>
-      </div>
+      
       <Footer />
     </>
   );

@@ -70,15 +70,19 @@ class Bid extends Component {
     );
   };
 
-  handleBidSubmit = item => {
-    API.updateItem(item)
-      .then(res => this.displayAll())
-      .catch(err => console.log(err));
+
+  handleBidSubmit = (event, id) => {
+    event.preventDefault();
+    API.updateBid(id,  {startingbid: this.state.highestbid})
+    .then(res=> {
+      // this.displayAll()
+      console.log(res.data)
+
+    })
+
   };
 
-  placeBid = () => {
 
-  }
 
   handleBuyNow = async item => {
     await this.deleteItem(item._id)
@@ -144,6 +148,7 @@ class Bid extends Component {
         {/* filter allows us to search by item name or category, but only first word of category (awk) */}
         <div className="container">
           <div className="row">
+
             {this.state.results.filter(item => (item.itemname).toLowerCase().includes(this.state.search.toLowerCase()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
               return (
                 <>
@@ -167,18 +172,18 @@ class Bid extends Component {
                           <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>
                           <br /><br />
                           {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                          {/*Here goes delete function, alert that notifies of successful purchase*/}
-                          <form>
-                            <div className="form-row">
-                              <div className="form-group">
-                                <button className="btn btn-outline-secondary bid" type="text" onClick={() => this.handleBidSubmit(item)}>Place bid</button>
-                              </div>
-                              <div className="form-group col-md-8">
-                                <input type="number" className="form-control" id="formGroupExampleInput" placeholder="Price Here" />
-                              </div>
-                            </div>
-                          </form>
-                        </div>
+                          {/*Here goes delete function, alert that notifies of successful purchase*/}               
+
+
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <button className="btn btn-outline-secondary bid" type="text" onClick={(e)=>this.handleBidSubmit(e, item.itemname)}>Place bid</button>
+                       
+                      </div>
+                      <div className="form-group col-md-8">
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange}/>
+
                       </div>
                     </div>
                     <br />
