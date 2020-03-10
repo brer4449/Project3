@@ -62,22 +62,22 @@ class Bid extends Component {
     this.setState({
       [name]: value
     }
-      //commented this out because I'm not sure what it does and it wasn't letting my search function work... we probs need it tho
-      // , () => {
-      //   console.log(this.state);
-      //   this.displayData(this.state.search)
-      // }
+      
     );
   };
 
   handleBidSubmit = (event, id) => {
     event.preventDefault();
+   
     API.updateBid(id, { startingbid: this.state.highestbid })
-      .then(res => {
+      .then(res => {window.location.reload(false);
      
-        console.log(res.data)
+        alert("Your bid of $" + this.state.highestbid + " was accepted!")
+        
       })
   };
+
+  
 
   handleBuyNow = async item => {
     await this.deleteItem(item._id)
@@ -86,8 +86,7 @@ class Bid extends Component {
   
 
   render() {
-    return (
-      <>
+    return ( <>
 
         <br></br>
         <br></br>
@@ -142,13 +141,13 @@ class Bid extends Component {
             ></input>
           </div>
         </form>
-        {/* filter allows us to search by item name or category, but only first word of category (awk) */}
+       
 
         <br></br><br></br>
         <div className="container">
           <div className="row">
-
-
+ {/* filter allows us to search by item name or category, but only first word of category (awk) */}
+            {/**Filtering through results */}
             {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
               return (
                 <>
@@ -174,7 +173,7 @@ class Bid extends Component {
 
 
                           
-            <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>
+                          <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>
                           <br></br><br></br>
 
                          
