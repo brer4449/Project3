@@ -73,12 +73,12 @@ class Bid extends Component {
 
   handleBidSubmit = (event, id) => {
     event.preventDefault();
-    API.updateBid(id,  {startingbid: this.state.highestbid})
-    .then(res=> {
-      // this.displayAll()
-      console.log(res.data)
+    API.updateBid(id, { startingbid: this.state.highestbid })
+      .then(res => {
+        // this.displayAll()
+        console.log(res.data)
 
-    })
+      })
 
   };
 
@@ -172,21 +172,25 @@ class Bid extends Component {
                           <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>
                           <br /><br />
                           {/*Here goes Bid Update price and logic to check if Bid equals to Buy now, if it does than it goes to purchase function*/}
-                          {/*Here goes delete function, alert that notifies of successful purchase*/}               
+                          {/*Here goes delete function, alert that notifies of successful purchase*/}
 
 
-                  <form>
-                    <div class="form-row">
-                      <div class="form-group">
-                        <button className="btn btn-outline-secondary bid" type="text" onClick={(e)=>this.handleBidSubmit(e, item.itemname)}>Place bid</button>
-                       
-                      </div>
-                      <div className="form-group col-md-8">
-                        <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange}/>
+                          <form>
+                            <div class="form-row">
+                              <div class="form-group">
+                                <button className="btn btn-outline-secondary bid" type="text" onClick={(e) => this.handleBidSubmit(e, item.itemname)}>Place bid</button>
 
+                              </div>
+                              <div className="form-group col-md-8">
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange} />
+
+                              </div>
+                            </div>
+                            <br />
+                          </form>
+                        </div>
                       </div>
                     </div>
-                    <br />
                   </div>
                 </>
               );
