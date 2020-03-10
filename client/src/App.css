@@ -1,34 +1,54 @@
 h1 {
   text-align: center;
 }
+
+
 .choice {
   text-align: center;
 }
+
 .card{
   border-color: orange;
   padding: 10px;
   line-height: 1rem;
 }
+
 h3{
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: orange;
   text-align: center;
 }
+
 h5{
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: orange;
 }
+
 hr{
   background-color:rgb(14, 99, 124);
 }
-.itemSearch {
+
+.itemSearch, input {
   margin-left: 10px;
 }
+
+.post-form{
+  margin-left:0px;
+}
+
+.cat-form{
+margin-left:85px
+}
+
 label{
   font-family: 'Times New Roman', Times, serif;
   color:rgb(14, 99, 124);
-  
 }
+.card-footer{
+  background-color: white;
+}
+
+
 .postButton {
   display: block;
   margin: 0 auto;
@@ -36,10 +56,40 @@ label{
   color:orange;
   font-weight: bold;
 }
-.buy {
-  margin-left:10px;
+
+h1{
+  color: rgb(14, 99, 124);
 }
+
+.pic{
+  float:left
+}
+
+.pic2{
+  float:right;
+  margin-top: -55px
+}
+
+.buy {
+  margin-left:40px;
+  border-color: orange;
+  color: #34495e;
+}
+
 .item-card{
+  border-color:  rgb(14, 99, 124);
+}
+
+.form-control{
+  border-color:  rgb(14, 99, 124);
+}
+
+#bid-input{
+  margin-left:32px;
+  border-color:  rgb(14, 99, 124);
+}
+
+.input, .itemSearch{
   border-color:  rgb(14, 99, 124);
 }
 .card-title{
@@ -47,15 +97,17 @@ label{
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .card-img{
   height:100px;
 }
-.bot{
-  height:300px;
-}
+
 .bid{
   margin-left:20px;
+  border-color: orange;
+  color: #34495e;
 }
+
 .file-select {
   border: 2px solid #dce4ec;
   background:#34495e;
@@ -64,22 +116,54 @@ label{
   background:#dce4ec;
   font-family: 'Times New Roman', Times, serif;
   font-size: 14px;
+ 
 }
-.file-upload .file-select:hover{border-color:#34495e;}
-.file-upload .file-select:hover {background-color:#34495e;}
+
+#img{
+  margin-left:0px;
+}
+
+.file-upload .file-select:hover{
+  border-color:#34495e;
+}
+
+.file-upload .file-select:hover {
+  background-color:#34495e;
+}
+
+.home1{
+  background-color: white;
+}
+
 .fun{
   color: rgb(14, 99, 124);
 }
+
+.fun2{
+  color:orange;
+}
+
 option{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(14, 99, 124);
 }
+
 li{
 list-style: none;
 font-family: Arial, Helvetica, sans-serif ;
 color:  rgb(14, 99, 124);
 }
+
+h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .bid{
  float:left;
- /* margin-left:-100px; */
+
+ margin-left:-10px;
+}
+
+.card-footer{
+  background-color: rgb(122, 194, 122);
+
 }
