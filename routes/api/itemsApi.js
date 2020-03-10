@@ -16,9 +16,8 @@ router
 //Matches with "/api/items/:id"
 
 router
-  .route("/:id")
-  
-//   .update(itemController.update)
+  .route("/:id")  
+  .put(itemController.update)
   .delete(itemController.remove);
 
 module.exports = router;

@@ -25,7 +25,7 @@ class Bid extends Component {
   displayAll = () => {
     API.getAllItems()
       .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         this.setState({
           results: res.data
         });
@@ -69,14 +69,17 @@ class Bid extends Component {
     );
   };
 
-  handleBidSubmit = event => {
+  handleBidSubmit = (event, id) => {
     event.preventDefault();
-    this.searchData(this.state.search);
+    API.updateBid(id,  {startingbid: this.state.highestbid})
+    .then(res=> {
+      // this.displayAll()
+      console.log(res.data)
+
+    })
   };
 
-  placeBid = () => {
 
-  }
 
   // handleBuyNow = event =>{
   //   event.preventDefault();
@@ -176,11 +179,11 @@ class Bid extends Component {
                   <form>
                     <div class="form-row">
                       <div class="form-group">
-                        <button className="btn btn-outline-secondary bid" type="text" onChange={this.handleBidSubmit}>Place bid</button>
+                        <button className="btn btn-outline-secondary bid" type="text" onClick={(e)=>this.handleBidSubmit(e, item.itemname)}>Place bid</button>
                        
                       </div>
                       <div className="form-group col-md-8">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" />
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange}/>
                       </div>
                      
                     </div>
