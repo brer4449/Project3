@@ -17,7 +17,7 @@ function Home() {
             <div class="card text-center">
               <div class="card-header home1">
                   <img src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg" width="100px" height="100px" className="pic"/>
-               <h1 className="header"><Link to="./BidPost">Search collections, </Link> <Link to="./PostPage">Post </Link><span className="fun2">& </span><Link to="./BidPost">Bid</Link> </h1>
+               <h1 className="header"><Link to="./BidPost">Search </Link> <Link to="./PostPage">Post </Link><span className="fun2">& </span><Link to="./BidPost">Bid</Link> </h1>
               
     <img src="/images/act.png" width="100px" height="100px" className="pic2" />
            
@@ -69,7 +69,7 @@ function Home() {
         </div>
       </div>
       <br></br><br></br>  
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
