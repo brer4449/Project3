@@ -1,14 +1,10 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-
-
 mongoose.connect(
     process.env.MONGODB_URI ||
     "mongodb://localhost/auction"
 );
-
 //hey hope this works!
-
 // for front end make dropdown for categories: Home and garden, Electronics, Fashion, Sporting goods, businessIndustrial
 const itemSeed = [
     // Home and garden
@@ -337,8 +333,6 @@ const itemSeed = [
         condition: "Good"
     },
 ]
-
-
 db.Items
     .remove({})
     .then(() => db.Items.collection.insertMany(itemSeed))
