@@ -51,13 +51,13 @@ function PostPage() {
       <br />
       <div className="container">
         <div className="row">
-          <div className="col-md-6 offset-3">
+          <div className="col-md-6 offset-sm-3">
             <h3>Fill <span className="fun">out</span> a <span className="fun">form</span> to <span className="fun">upload</span> your <span className="fun">product</span>!</h3>
             <hr />
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4  offset-4 col-sm-12">
+          <div className="col-md-4  offset-sm-4 col-sm-12">
             <div className="card">
               <form >
                 <br />
