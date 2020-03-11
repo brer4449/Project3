@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BackgroundPic from "../components/BackgroundPic/index"
-import Footer from "../components/Footer/index"
+import Footer from "../components/Footer/index";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from 'react-bootstrap/Carousel'
 
 
 
@@ -22,11 +24,51 @@ function Home() {
              
               <div class="card-body home">
             
-              {/* <BackgroundPic backgroundImage="https://t4.ftcdn.net/jpg/00/99/17/81/240_F_99178133_4oUPBVYO1y7Py4M6otxiyfD9aSNLz3Vu.jpg" height="100px"/> */}
+            
               <img src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg" width="300px" height="150px" className="pic"/>
               <br></br><br></br>
-              <h2>Explore our collections</h2>
+              <Link to="./BidPost" className="collections">Explore our collections</Link>
+              <br></br><br></br>
             <h3>Bid and Save</h3>
+
+<Carousel>
+  <Carousel.Item>
+  <img
+      className="d-block w-100"
+      src="holder.js/800x400?text=Second slide&bg=282c34"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="holder.js/800x400?text=Second slide&bg=282c34"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="holder.js/800x400?text=Third slide&bg=20232a"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
            
             
               </div>

@@ -190,7 +190,7 @@ class Bid extends Component {
                                 <form>
                                   <div class="form-row">
                                     <div className="form-group col-md-8">
-                                      <input type="text" class="form-control" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange} />
+                                      <input type="text" class="form-control placeBid" id="formGroupExampleInput" name="highestbid" placeholder="Bid Here" onChange={this.handleInputChange} />
 
                                     </div>
                                   </div>

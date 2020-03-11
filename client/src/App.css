@@ -165,7 +165,17 @@ h2{
 
 .card-footer{
   background-color: rgb(122, 194, 122);
+}
 
+.collections{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  color: black;
+  font-weight: bold;
+}
+
+.placeBid{
+  width:100px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -181,11 +191,7 @@ h2{
 .itemSearch {
  width: 300px;
  margin-left: -75px;
-
-
 }
-
-
 
 .searchByName{
   margin-top:120px;
