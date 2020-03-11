@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const itemsSchema = new Schema({
 image: {
     type: String,
-    default:""
+    default:"",
+    required: true
 },
   
 itemname: { 

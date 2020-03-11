@@ -70,6 +70,7 @@ class Bid extends Component {
     );
   };
 
+
   handleBidSubmit = (event, id) => {
     event.preventDefault();
     API.updateBid(id, { startingbid: this.state.highestbid })

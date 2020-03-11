@@ -17,14 +17,16 @@
 }
 
 
-.navbar-nav{
-    float: right;
-  }
-
   span{
       color:orange;
   }
 
   .logo{
     color: rgb(14, 99, 124)
+  }
+
+
+  .navbar-toggler{
+      background-color:  rgb(14, 99, 124);
+     
   }
