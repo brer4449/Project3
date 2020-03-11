@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import BidPost from "./pages/BidPost";
 import PostPage from "./pages/PostPage";
 import Navbar from "./components/Navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

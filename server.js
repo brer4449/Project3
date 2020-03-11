@@ -3,6 +3,8 @@ const fileUpload = require("express-fileupload")
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+const path = require("path");
+const multer = require("multer");
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
@@ -19,6 +21,31 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");
+
+const storage = multer.diskStorage({
+   destination: "./public/uploads/",
+   filename: function(req, file, cb){
+      cb(null,"IMAGE-" + Date.now() + path.extname(file.originalname));
+   }
+});
+
+const upload = multer({
+   storage: storage,
+   limits:{fileSize: 1000000},
+}).single("myImage");
+
+const router = express.Router();
+
+router.post('/upload', function (req, res) {
+  upload(req, res, function (err) {
+      iconsole.log("Request ---", req.body);
+      console.log("Request file ---", req.file);//Here you get file.
+      /*Now do where ever you want to do*/
+      if(!err) {
+          return res.send(200).end();
+      }
+  })
+})
 
 //Upload Endpoint -- endpoint we want to send a request to from react and send along our file
 // app.post("/api/items", (req, res) => {

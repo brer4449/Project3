@@ -1,11 +1,14 @@
 import API from "../utils/API";
 import React, { useState, useEffect } from "react"; //, useReducer taken out since not using
 import Footer from "../components/Footer";
+const axios = require("axios");
 
 function PostPage() {
   // Setting our component's initial state
-  const [Items, setItems] = useState([])
-  const [formObject, setFormObject] = useState({})
+  const [Items, setItems] = useState([]);
+  const [file, setFile] = useState(null);
+  const [formObject, setFormObject] = useState({});
+
 
   // Load all items and store them with setItems
   useEffect(() => {
@@ -22,6 +25,9 @@ function PostPage() {
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value })
+    if(!value) {
+      alert("Please fill up all fields!");
+   } 
   };
 
   // When the form is submitted, use the API.saveItem method to save the item data
@@ -38,6 +44,8 @@ function PostPage() {
       .catch(err => console.log(err))
   };
 
+
+    
   return (
     <>
       <br />
@@ -81,6 +89,7 @@ function PostPage() {
                       <option>Sporting goods</option>
                       <option>Business and industrial</option>
                     </select>
+
                   </div>
                 </div>
                 <div className="form-row">
@@ -97,10 +106,14 @@ function PostPage() {
                 <div className="form-row">
                   <div className="form-group col-md-12 ">
                     <label htmlFor="img">Upload product image</label>
-                    <div className="file-upload">
-                      <div className="file-select">
-                        <input id="img" name="image" type="file" />
-                      </div>
+
+                      <div class="file-upload">
+                        <div class="file-select">
+                         <input id="img" name="myImage" type="file" onChange= {()=>onChange} required />
+                        </div>
+                      </div>                      
+
+
                     </div>
                   </div>
                 </div>
