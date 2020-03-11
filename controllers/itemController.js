@@ -13,7 +13,6 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-
   findCategory: function (req, res) {
     console.log(req.query)
     db.Items
@@ -25,13 +24,10 @@ module.exports = {
   //???????????????//
   findById: function (req, res) {
     db.Items
-
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-
-  //*************** */
 
   ////Post******//
   create: function (req, res) {
@@ -43,12 +39,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-
-  update: function(req, res) {
+  update: function (req, res) {
     console.log(req.params, req.body)
     db.Items
-      .findOneAndUpdate({itemname: req.params.id }, req.body)
-
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -56,7 +50,6 @@ module.exports = {
   //Delete//
   remove: function (req, res) {
     db.Items
-
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
