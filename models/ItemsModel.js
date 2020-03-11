@@ -5,7 +5,7 @@ const itemsSchema = new Schema({
 image: {
     type: String,
     default:"",
-    
+
 },
   
 itemname: { 
