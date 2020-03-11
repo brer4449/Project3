@@ -46,7 +46,7 @@ function PostPage() {
 
     
   return (
-    <>
+    <div>
       <br />
       <br />
       <div className="container">
@@ -108,14 +108,16 @@ function PostPage() {
 
                       <div class="file-upload">
                         <div class="file-select">
-                         <input id="img" name="myImage" type="file" />
+
+                         <input id="img" name="image" type="file" />
+
                         </div>
                       </div>                      
 
 
                     </div>
                   </div>
-                
+
                 <br />
                 <button id="myForm" className="postButton btn" onClick={handleSubmit}>Post Item!</button>
                 <br />
@@ -125,12 +127,15 @@ function PostPage() {
           </div>
           <br />
         </div>
-      </div>
+   
       <br />
       <br />
       <br />
       <Footer />
-    </>
+    </div>
+
+    </div>
+  
   );
 }
 

@@ -1,12 +1,17 @@
 import React from "react";
 import "./style.css";
+import SocialFollow from "../Social/social";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <span>BidBot ©2020</span>
+    <div>
     
+    <footer className="footer">
+    
+      <span id="bidbot">BidBot ©2020<SocialFollow/></span>
+     
     </footer>
+    </div>
   );
 }
 

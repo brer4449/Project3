@@ -114,6 +114,7 @@ class Bid extends Component {
           <div className="col-12">
         
 
+
       <form className="form-inline cat-form">
         <div className="form-group col-6">
           <h3>Shop <span className="fun">by</span> category</h3>
@@ -224,6 +225,7 @@ class Bid extends Component {
       <br></br>
       <br></br>
       <br></br>
+
       <Footer />
     </>
     );
