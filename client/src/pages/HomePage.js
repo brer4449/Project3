@@ -1,11 +1,10 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import BackgroundPic from "../components/BackgroundPic/index"
 import Footer from "../components/Footer/index";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel'
-
-
 
 function Home() {
   return (
@@ -14,15 +13,13 @@ function Home() {
       <div class="container">
         <div class="row">
           <div class="col-12">
-
             <div class="card text-center">
               <div class="card-header home1">
-               <h1>Search, Post <span className="fun2">&</span> Bid </h1>
-              
-               <img src="/images/act.png" width="100px" height="100px" className="pic2" />
+                <h1>Search, Post <span className="fun2">&</span> Bid </h1>
+                <img alt="logo" src="/images/act.png" width="100px" height="100px" className="pic2" />
               </div>
-             
               <div class="card-body home">
+
             
             
               <img src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg" width="300px" height="150px" className="pic"/>
@@ -71,13 +68,10 @@ function Home() {
 </Carousel>
            
             
-              </div>
-             
+             </div>
               <div class="card-footer">
-            
               </div>
             </div>
-           
           </div>
         </div>
       </div>
