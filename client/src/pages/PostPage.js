@@ -131,10 +131,11 @@ function PostPage() {
       <br />
       <br />
       <br />
-      <Footer />
-    </div>
+      </div>
 
-    </div>
+    
+      <Footer />
+      </div>
   
   );
 }
