@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:Password123.mlab.com:51245/heroku_l28v1vr4");
 
 //Upload Endpoint -- endpoint we want to send a request to from react and send along our file
 // app.post("/api/items", (req, res) => {
