@@ -109,14 +109,14 @@ function PostPage() {
 
                       <div class="file-upload">
                         <div class="file-select">
-                         <input id="img" name="myImage" type="file" onChange= {()=>onChange} required />
+                         <input id="img" name="myImage" type="file" />
                         </div>
                       </div>                      
 
 
                     </div>
                   </div>
-                </div>
+                
                 <br />
                 <button id="myForm" className="postButton btn" onClick={handleSubmit}>Post Item!</button>
                 <br />
