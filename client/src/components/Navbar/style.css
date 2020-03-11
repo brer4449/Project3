@@ -16,7 +16,6 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
   span{
       color:orange;
   }
@@ -27,6 +26,6 @@
 
 
   .navbar-toggler{
-      background-color:  rgb(14, 99, 124);
+      background-color: orange;
      
   }
