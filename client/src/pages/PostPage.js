@@ -6,7 +6,7 @@ const axios = require("axios");
 function PostPage() {
   // Setting our component's initial state
   const [Items, setItems] = useState([]);
-  const [file, setFile] = useState(null);
+
   const [formObject, setFormObject] = useState({});
 
 
@@ -25,9 +25,8 @@ function PostPage() {
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value })
-    if(!value) {
-      alert("Please fill up all fields!");
-   } 
+   
+   
   };
 
   // When the form is submitted, use the API.saveItem method to save the item data

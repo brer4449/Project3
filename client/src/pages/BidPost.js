@@ -164,18 +164,26 @@ class Bid extends Component {
       </form>
       <br></br>
       <br></br>
+
+
       <div className="container">
         <div className="row">
           {/* filter allows us to search by item name */}
           {/**Filtering through results */}
+
+
           {this.state.results.filter(item => (item.itemname).toLowerCase().trim().includes(this.state.search.toLowerCase().trim()) || (item.category).toLowerCase().includes(this.state.search.toLowerCase())).map(item => {
             return (
+
+
               <>
                 <div className="col-md-4 col-sm-12">
                   <div className="card item-card">
                     <div className="row">
                       <div className="col-4">
                         <nav className="card-title">{item.itemname}</nav>
+
+
                         <img src={item.image} className="card-img" alt="..." />
                       </div>
                       <br></br>
@@ -208,10 +216,10 @@ class Bid extends Component {
               </>
             );
           })}
+            </div>
+          </div>
+         </div>
         </div>
-      </div>
-      </div>
-      </div>
       </div>
       <br></br>
       <br></br>

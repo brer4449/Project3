@@ -141,11 +141,11 @@ h2{
 .placeBid{
   width:100px;
 }
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   h3{
     font-size: large;
   }
-}
+ 
 .cats{
   margin-left: -100px;
 }
@@ -168,4 +168,5 @@ option{
   float:right;
   margin-left: 90px;
   margin-top: -140px;
+}
 }
