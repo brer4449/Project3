@@ -101,7 +101,7 @@ function PostPage() {
                     </select>
                   </div>
                 </div>
-                <div className="form-row">
+                {/* <div className="form-row">
                   <div className="form-group col-md-12 ">
                     <label htmlFor="img">Upload product image</label>
 
@@ -115,7 +115,7 @@ function PostPage() {
 
 
                     </div>
-                  </div>
+                  </div> */}
 
                 <br />
                 <button id="myForm" className="postButton btn" onClick={handleSubmit}>Post Item!</button>

@@ -71,7 +71,7 @@ function Home() {
 </Carousel>
 
 </div>          
-<h4  className="text">BidBot is one the most popular auction sites, with thousand of items in different categories being bought and sold every day for unbeatable prices. Discover our best deals and start saving now!  </h4>    
+<h4  className="text">BidBot is an auction site, selling items from jewelry to home appliances for unbeatable prices! Discover our best deals and start saving now!</h4>    
 
 
               </div>
