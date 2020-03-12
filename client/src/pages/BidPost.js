@@ -61,7 +61,8 @@ class Bid extends Component {
     const value = event.target.value;
     const name = event.target.name;
     this.setState({
-      [name]: value
+      [name]: value,
+      
     });
   };
 
@@ -100,7 +101,7 @@ class Bid extends Component {
   //Function that deletes item from DB when item is "bought"
   handleBuyNow = async item => {
     await this.deleteItem(item._id)
-    alert(`Congratulations you are now the proud owner of a ${item.itemname}`)
+    alert(`Congratulations, you are now the proud owner of a ${item.itemname}`)
   }
 
   render() {
@@ -117,7 +118,7 @@ class Bid extends Component {
 
       <form className="form-inline cat-form">
         <div className="form-group col-6">
-          <h3>Shop <span className="fun">by</span> category</h3>
+          <h3 className="cats">Shop <span className="fun">by</span> category</h3>
           <select className="itemSearch custom-select" name="search" onChange={this.handleInputChange}>
             <option id="allItems" value="" name="search"  >
               ...
@@ -151,10 +152,10 @@ class Bid extends Component {
             </option>
           </select>
         </div>
-        <h3><span className="fun">or </span>search <span className="fun">by </span>name</h3>
+        <h3 className="searchByName"><span className="fun">or </span>search <span className="fun">by </span>name</h3>
         <div>
           <input
-            className="input form-control"
+            className="input form-control filter"
             placeholder="Search by name"
             type="text"
             onChange={this.handleInputChange.bind(this)}

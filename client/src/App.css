@@ -1,5 +1,8 @@
 h1 {
   text-align: center;
+}
+
+.link1, .link2, .link3 {
   color:rgb(14, 99, 124);
 }
 .choice {
@@ -25,6 +28,7 @@ hr{
 .itemSearch, input {
   margin-left: 10px;
 }
+
 .post-form{
   margin-left:0px;
 }
@@ -139,15 +143,50 @@ h2{
   color: black;
   font-weight: bold;
 }
+
 .placeBid{
-  width:100px;
+  width:110px;
 }
 
 
 .header{
-margin-top:15px
+margin-top:15px;
 }
+
+
+.carousel{
+  float:left;
+  width:500px;
+}
+
+.text{
+  float:right;
+  width: 500px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ margin-top:20px;
+ color: gray;
+ text-decoration: underline;
+ text-decoration-color: rgb(122, 194, 122);
+
+}
+
+/* hides carousel default arrows */
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-image: none;
+}
+
+
+
 @media only screen and (max-width: 600px) {
+
+  .carousel{
+    width:290px;
+  }
+
+  .text{
+    font-size: medium;
+    width:290px
+  }
   h3{
     font-size: large;
   }

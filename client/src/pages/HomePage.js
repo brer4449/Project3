@@ -7,6 +7,7 @@ import Carousel from 'react-bootstrap/Carousel'
 
 
 function Home() {
+ 
   return (
     <div>
       <br></br>
@@ -14,50 +15,65 @@ function Home() {
         <div className="row">
           <div className="col-12">
 
-            <div className="card text-center">
-              <div className="card-header home1">
-                  <img src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg" width="100px" height="100px" alt="Bid_Med" className="pic"/>
-               <h1 className="header"><Link to="./BidPost">Search </Link> <Link to="./PostPage">Post </Link><span className="fun2">& </span><Link to="./BidPost">Bid</Link> </h1>
+
+            <div class="card text-center">
+              <div class="card-header home1">
+                  <img src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg" width="100px" height="100px" className="pic"/>
+               <h1 className="header"><Link to="./BidPost" className="link1">Search, </Link> <Link to="./PostPage"  className="link2">Post </Link><span className="fun2">& </span><Link to="./BidPost"  className="link3">Bid</Link> </h1>
+            
+
               
     <img src="/images/act.png" width="100px" height="100px" alt="act" className="pic2" />
            
               </div>
              
-              <div className="card-body home">
 
-<Carousel>
+              <div class="card-body home">
+           
+<div className="carousel">
+
+
+{/* setting indicators to false removes default bottom dashes at the bottom of the galery*/ }
+<Carousel  indicators={false}> 
   <Carousel.Item>
 
-  <img src={process.env.PUBLIC_URL + '/images/pic1.jpeg'} height="200px" alt="pic1" width="700px"/>
 
-    <Carousel.Caption>
-      
-    </Carousel.Caption>
+{/* process.env.PUBLIC_URL allows accessing  images from public folder */}
+  <img src={process.env.PUBLIC_URL + '/images/pic3.jpg'} height="200px" width="500px"/>
+  </Carousel.Item>
+
+
+  <Carousel.Item>
+   
+<img src={process.env.PUBLIC_URL + '/images/pic6.jpg'} height="200px" width="500px"/>
+   
+  </Carousel.Item>
+
+  <Carousel.Item>
+   
+
+<img src={process.env.PUBLIC_URL + '/images/pic8.jpg'} height="200px" width="500px"/>
+  
+
+  </Carousel.Item>
+
+  <Carousel.Item>
+  
+<img src={process.env.PUBLIC_URL + '/images/pic7.jpg'} height="200px" width="500px"/>
+   
   </Carousel.Item>
   <Carousel.Item>
    
-<img src={process.env.PUBLIC_URL + '/images/pic2.jpg'} height="200px" alt="pic2" width="700px"/>
-    <Carousel.Caption>
-     
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
+<img src={process.env.PUBLIC_URL + '/images/pic5.jpg'} height="200px" width="500px"/>
    
-<img src={process.env.PUBLIC_URL + '/images/pic3.jpg'} height="200px" alt="pic3" width="700px"/>
-    <Carousel.Caption>
-     
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-   
-<img src={process.env.PUBLIC_URL + '/images/pic4.jpg'} height="200px" alt="pic4" width="500px"/>
-    <Carousel.Caption>
-     
-    </Carousel.Caption>
+
   </Carousel.Item>
 </Carousel>
-           
-            
+
+</div>          
+<h4  className="text">BidBot is one the most popular auction sites, with thousand of items in different categories being bought and sold every day for unbeatable prices. Discover our best deals and start saving now!  </h4>    
+
+
               </div>
              
               <div className="card-footer">
@@ -68,7 +84,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <br></br><br></br>  
+      <br></br><br></br> <br></br><br></br>   
       <Footer />
     </div>
   );

@@ -208,7 +208,7 @@ const itemSeed = [
         itemname: "Bicycle",
         startingbid: 1500,
         buyout: 2500,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "New"
     },
     {
@@ -216,7 +216,7 @@ const itemSeed = [
         itemname: "Boxing Gloves",
         startingbid: 40,
         buyout: 95,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "New"
     },
     {
@@ -224,7 +224,7 @@ const itemSeed = [
         itemname: "American Football",
         startingbid: 30,
         buyout: 80,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "New"
     },
     {
@@ -232,7 +232,7 @@ const itemSeed = [
         itemname: "Snowboard",
         startingbid: 200,
         buyout: 450,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "Good"
     },
     {
@@ -240,7 +240,7 @@ const itemSeed = [
         itemname: "Sports Bag",
         startingbid: 60,
         buyout: 115,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "New"
     },
     {
@@ -248,7 +248,7 @@ const itemSeed = [
         itemname: "Golf Set",
         startingbid: 200,
         buyout: 450,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "New"
     },
     {
@@ -256,7 +256,7 @@ const itemSeed = [
         itemname: "Ski Suit",
         startingbid: 80,
         buyout: 150,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "Good"
     },
     {
@@ -264,7 +264,7 @@ const itemSeed = [
         itemname: "Sports Glasses",
         startingbid: 60,
         buyout: 200,
-        category: "sportsGoods",
+        category: "sportingGoods",
         condition: "New"
     },
     // businessIndustrial
@@ -286,7 +286,7 @@ const itemSeed = [
     },
     {
         image: "/images/business3.jpg",
-        itemname: "Cubicle?",
+        itemname: "Cubicle",
         startingbid: 400,
         buyout: 950,
         category: "businessIndustrial",
