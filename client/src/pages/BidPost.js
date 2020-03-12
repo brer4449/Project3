@@ -117,7 +117,7 @@ class Bid extends Component {
 
 
       <form className="form-inline cat-form">
-        <div className="form-group col-6">
+        <div className="form-group col-md-6">
           <h3 className="cats">Shop <span className="fun">by</span> category</h3>
           <select className="itemSearch custom-select" name="search" onChange={this.handleInputChange}>
             <option id="allItems" value="" name="search"  >
@@ -179,7 +179,7 @@ class Bid extends Component {
 
 
               <>
-                <div className="col-md-4 col-sm-12">
+                <div className="col-xsm-12 col-md-4 col-sm-12">
                   <div className="card item-card">
                     <div className="row">
                       <div className="col-4">
@@ -205,7 +205,7 @@ class Bid extends Component {
                         <button className="btn btn-outline-secondary bid" type="text" onClick={(e) => this.handleBidSubmit(e, item)}>Place bid</button>
                         <form>
                           <div className="form-row">
-                            <div className="form-group col-md-8">
+                            <div className="form-group col-sm-8">
                               <input id={item._id} type="number" className="form-control placeBid" name={item._id} value={this.state.highestbid[item._id]} placeholder="Bid Here" onChange={this.handleBidPriceInput} />
                             </div>
                           </div>

@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://admin:password123@ds047197.mlab.com:47197/heroku_46bg7618");
 
 // const storage = multer.diskStorage({
 //    destination: "./public/uploads/",
