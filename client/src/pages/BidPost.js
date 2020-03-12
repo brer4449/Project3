@@ -137,9 +137,9 @@ class Bid extends Component {
               Fashion
             </option>
             <option
-              id="sportingGoods"
+              id="sportsGoods"
               name="search"
-              value="sportingGoods"
+              value="sportsGoods"
             >
               Sporting Goods
             </option>
@@ -186,17 +186,17 @@ class Bid extends Component {
                         <nav className="card-title">{item.itemname}</nav>
 
 
-                        <img src={item.image} className="card-img" alt="..." />
+                        <img src={item.image} className="card-img" alt={item.name} />
                       </div>
                       <br></br>
                       <div className="content">
                         <ul>
                           <br></br>
-                          <li><strong>Condition:</strong> {item.condition}</li>
+                          <li key ={item.toString()}><strong>Condition:</strong> {item.condition}</li>
                           <br></br>
-                          <li><strong>Current bid: $ </strong>{item.startingbid}</li>
+                          <li key ={item.toString()}><strong>Current bid: $ </strong>{item.startingbid}</li>
                           <br></br>
-                          <li><strong>Buyout price: $ </strong>{item.buyout} </li>
+                          <li key ={item.toString()}><strong>Buyout price: $ </strong>{item.buyout} </li>
                         </ul>
 
                         <button className="btn btn-outline-secondary buy" onClick={() => this.handleBuyNow(item)}>Buy Now</button>

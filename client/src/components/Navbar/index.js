@@ -9,13 +9,13 @@ function Navbar() {
 
       <img src="/images/bot1.png" width="100px" height="100px" className="d-inline-block align-top" alt="" />
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      <button className="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
 

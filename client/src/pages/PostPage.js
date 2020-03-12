@@ -1,14 +1,13 @@
 import API from "../utils/API";
 import React, { useState, useEffect } from "react"; //, useReducer taken out since not using
 import Footer from "../components/Footer";
-const axios = require("axios");
+
 
 function PostPage() {
   // Setting our component's initial state
   const [Items, setItems] = useState([]);
-  const [file, setFile] = useState(null);
   const [formObject, setFormObject] = useState({});
-
+  console.log(Items)
 
   // Load all items and store them with setItems
   useEffect(() => {

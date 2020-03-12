@@ -11,31 +11,37 @@ function Home() {
   return (
     <div>
       <br></br>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+
 
             <div class="card text-center">
               <div class="card-header home1">
                   <img src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg" width="100px" height="100px" className="pic"/>
                <h1 className="header"><Link to="./BidPost" className="link1">Search, </Link> <Link to="./PostPage"  className="link2">Post </Link><span className="fun2">& </span><Link to="./BidPost"  className="link3">Bid</Link> </h1>
             
+
               
-    <img src="/images/act.png" width="100px" height="100px" className="pic2" />
+    <img src="/images/act.png" width="100px" height="100px" alt="act" className="pic2" />
            
               </div>
              
+
               <div class="card-body home">
            
 <div className="carousel">
+
 
 {/* setting indicators to false removes default bottom dashes at the bottom of the galery*/ }
 <Carousel  indicators={false}> 
   <Carousel.Item>
 
+
 {/* process.env.PUBLIC_URL allows accessing  images from public folder */}
   <img src={process.env.PUBLIC_URL + '/images/pic3.jpg'} height="200px" width="500px"/>
   </Carousel.Item>
+
 
   <Carousel.Item>
    
@@ -45,12 +51,14 @@ function Home() {
 
   <Carousel.Item>
    
+
 <img src={process.env.PUBLIC_URL + '/images/pic8.jpg'} height="200px" width="500px"/>
   
+
   </Carousel.Item>
 
   <Carousel.Item>
-   
+  
 <img src={process.env.PUBLIC_URL + '/images/pic7.jpg'} height="200px" width="500px"/>
    
   </Carousel.Item>
@@ -58,6 +66,7 @@ function Home() {
    
 <img src={process.env.PUBLIC_URL + '/images/pic5.jpg'} height="200px" width="500px"/>
    
+
   </Carousel.Item>
 </Carousel>
 
@@ -67,7 +76,7 @@ function Home() {
 
               </div>
              
-              <div class="card-footer">
+              <div className="card-footer">
             
               </div>
             </div>
