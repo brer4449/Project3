@@ -19,13 +19,13 @@ app.use(fileUpload())
 
 
 if (process.env.NODE_ENV === "production") {
- app.use(express.static(path.join(__dirname, './client/build')));
+ app.use(express.static(__dirname, 'client/build'));
 }
 // Add routes, both API and view
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/auction");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://admin:password123@ds053784.mlab.com:53784/heroku_k50798ts");
 
 // const storage = multer.diskStorage({
 //    destination: "./public/uploads/",
