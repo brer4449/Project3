@@ -1,68 +1,62 @@
+## Table of contents
+
+- [General info](#general-info)
+- [Instructions](#instructions)
+- [Functionality](#functionality)
+- [Technologies](#technologies)
+- [Dependencies](#dependencies)
+- [DevDependencies](#devdependencies)
+- [Github Link](#github-link)
+
+## General Info
+
+This application is meant for someone who wants to get rid of old junk for some coin, or for someone who is in need of an every day appliance. Bidbot allows user to post or bid on items in our database. Using React.js, the user is able to place bids on items or post items (without images for now) to be bid on by other users. 
+
+## Instructions
+
+In order to use the application, be sure to install all of the dependencies (see below). If the user would like to test in development, they must run npm start in the command line after running npm run seed to populate the database.
+
+## Functionality
+
+- Landing page where user decides where they would like to go.
+  ![first example of working application](https://github.com/vormc2005/Project3/blob/master/client/public/images/bidbot1.png)
+
+- Second page where user can post an item.
+  ![second example of working application](https://github.com/vormc2005/Project3/blob/master/client/public/images/bidbot2.png)
+
+## Technologies
+
+- Node
+- Bootstrap
+- Mongoose
+- React.js
+- ReactStrap
+- Heroku (coming soon)
+
+## Dependencies
+
+- Axios version 0.19.2
+- Bootstrap version 4.4.1
+- Express version 4.17.1
+- Mongoose version 5.9.3
+- React version 16.13.0
+- React-advanced-form version 1.7.2
+- React-bootstrap version 1.0.0-beta.17
+- React-dom version 16.13.0
+- React-dropzone version 10.2.1
+- React-router-dom version 5.1.2
+- React-scripts version 3.4.0
+- Seeder version 0.2.4
+
+## DevDependencies
+
+- Concurrently version 4.1.0
+- Nodemon version 1.18.7
+
+## Github Link
+
+https://github.com/vormc2005/Project3
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
