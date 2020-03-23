@@ -16,13 +16,13 @@ app.use(fileUpload())
 //     app.get('/', (req, res) => {
 //         res.sendFile(path.join(__dirname, './client/build/'))
 //     });
-
+app.use(routes);
 
 if (process.env.NODE_ENV === "production") {
  app.use(express.static(path.join(__dirname, './client/build')));
 }
 // Add routes, both API and view
-app.use(routes);
+
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");

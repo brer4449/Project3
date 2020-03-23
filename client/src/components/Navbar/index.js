@@ -41,7 +41,16 @@ function Navbar() {
               to="/PostPage"
               className={window.location.pathname === "/PostPage" ? "nav-link active" : "nav-link"}
             >
-              Add item
+              Add item <span> |</span>
+            </Link>
+          </li>
+
+          <li className="nav-item">
+            <Link
+              to="/Cart"
+              className={window.location.pathname === "/PostPage" ? "nav-link active" : "nav-link"}
+            >
+              <ion-icon name="basket"></ion-icon>Cart
             </Link>
           </li>
 
