@@ -20,7 +20,25 @@ app.use(fileUpload())
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, './client/build')));
- }
+
+}
+// Add routes, both API and view
+app.use(routes);
+
+//Serve static assets (build folder) if in production
+
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");
+
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://admin:password123@ds047197.mlab.com:47197/heroku_46bg7618");
+
+// const storage = multer.diskStorage({
+//    destination: "./public/uploads/",
+//    filename: function(req, file, cb){
+//       cb(null,"IMAGE-" + Date.now() + path.extname(file.originalname));
+//    }
+// });
+
 
  app.use(routes);
 // Add routes, both API and view
