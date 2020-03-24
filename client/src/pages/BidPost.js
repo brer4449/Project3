@@ -137,9 +137,9 @@ class Bid extends Component {
               Fashion
             </option>
             <option
-              id="sportsGoods"
+              id="sportingGoods"
               name="search"
-              value="sportsGoods"
+              value="sportingGoods"
             >
               Sporting Goods
             </option>
