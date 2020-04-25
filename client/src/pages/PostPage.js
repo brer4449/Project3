@@ -1,13 +1,15 @@
 import API from "../utils/API";
 import React, { useState, useEffect } from "react"; //, useReducer taken out since not using
 import Footer from "../components/Footer";
+import FileUpload from "../components/utils/FileUpload";
 
 
 function PostPage() {
   // Setting our component's initial state
   const [Items, setItems] = useState([]);
   const [formObject, setFormObject] = useState({});
-  console.log(Items)
+ 
+  const [Images, setImages] = useState([])
 
   // Load all items and store them with setItems
   useEffect(() => {
@@ -42,6 +44,9 @@ function PostPage() {
       .catch(err => console.log(err))
   };
 
+  const updateImages = (newImages)=>{
+    setImages(newImages)
+  };
 
     
   return (
@@ -101,6 +106,11 @@ function PostPage() {
                     </select>
                   </div>
                 </div>
+
+                  {/* DropZone */}
+                  <FileUpload refreshFunction={updateImages} />
+
+
                 {/* <div className="form-row">
                   <div className="form-group col-md-12 ">
                     <label htmlFor="img">Upload product image</label>
