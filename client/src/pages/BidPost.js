@@ -61,9 +61,7 @@ class Bid extends Component {
     const value = event.target.value;
     const name = event.target.name;
     this.setState({
-      [name]: value,
-      
-    });
+      [name]: value});
   };
 
   //Function that changes bid price amount
