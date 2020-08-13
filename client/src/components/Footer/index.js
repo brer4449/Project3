@@ -5,12 +5,12 @@ import SocialFollow from "../Social/social";
 function Footer() {
   return (
     <div>
-    
-    <footer className="footer">
-    
-      <span id="bidbot">BidBot ©2020<SocialFollow/></span>
-     
-    </footer>
+      <footer className="footer">
+        <span id="bidbot">
+          BidBot ©2020
+          <SocialFollow />
+        </span>
+      </footer>
     </div>
   );
 }
