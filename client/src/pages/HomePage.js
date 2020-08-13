@@ -11,8 +11,8 @@ function Home() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div class="card text-center">
-              <div class="card-header home1">
+            <div className="card text-center">
+              <div className="card-header home1">
                 <img
                   src="https://ofcc.ohio.gov/portals/0/Images/Resources/Bid%203D_Med.jpg"
                   width="100px"
@@ -40,7 +40,7 @@ function Home() {
                   className="pic2"
                 />
               </div>
-              <div class="card-body home">
+              <div className="card-body home">
                 <div className="carousel">
                   {/* setting indicators to false removes default bottom dashes at the bottom of the galery*/}
                   <Carousel indicators={false}>
