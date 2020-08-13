@@ -1,5 +1,5 @@
 const express = require("express");
-const fileUpload = require("express-fileupload")
+const fileUpload = require("express-fileupload");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -9,36 +9,26 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/api/items', require('./routes/index'));
+app.use("/api/items", require("./routes/index"));
 //To use express-fileupload
 
-
-
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, './client/build')));
-
+  app.use(express.static(path.join(__dirname, "./client/build")));
 }
-// Add routes, both API and view
 
+// Add routes, both API and view
 app.use(routes);
 
 //Serve static assets (build folder) if in production
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");
-
-
-
-
- app.use(routes);
-// Add routes, both API and view
-
-
-// Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction", {
-  useNewUrlParser:true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
+app.use(routes);
+// Add routes, both API and view
 
 // Start the API server
 app.listen(PORT, function () {
