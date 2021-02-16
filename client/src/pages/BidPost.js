@@ -171,6 +171,15 @@ class Bid extends Component {
             <div className="container">
               <div className="row">
                 {/* filter allows us to search by item name */}
+                {/* 
+                test
+                https://documentation.unbounce.com/hc/en-us/articles/204011920-Setting-Up-Your-CNAME-with-HostGator
+                https://webmasters.stackexchange.com/questions/99505/custom-domain-github-and-hostgator
+                https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site
+                https://justinlee.sg/2017/12/using-git-to-update-my-hostgator-website/
+                https://time.com/5938729/eye-to-eye-portraits-of-lesbians-jeb/
+                https://www.freecodecamp.org/news/how-to-build-credibility-as-a-new-developer/
+                */}
                 {this.state.items
                   .filter(
                     (item) =>
