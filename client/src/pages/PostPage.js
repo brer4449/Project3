@@ -16,7 +16,10 @@ function PostPage() {
 
   function displayAll() {
     API.getAllItems()
-      .then((res) => setItems(res))
+      .then((res) => {
+        console.log(res);
+        setItems(res);
+      })
       .catch((err) => console.log(err));
   }
 

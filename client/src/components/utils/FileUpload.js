@@ -4,7 +4,7 @@ import Dropzone from "react-dropzone";
 import Axios from "axios";
 
 function FileUpload(props) {
-  const [Images, setImages] = useState([]);
+  const [setImages] = useState([]); // should be [Images, setImages] = useState([]) got rid of first element to stop warning messages
   const onDrop = (files) => {
     let formData = new FormData();
     const config = {

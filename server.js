@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/api/items", require("./routes/index"));
 //To use express-fileupload
 
 if (process.env.NODE_ENV === "production") {
