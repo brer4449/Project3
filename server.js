@@ -26,6 +26,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+console.log(process.env.MONGODB_URI);
 
 app.use(routes);
 // Add routes, both API and view
