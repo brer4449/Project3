@@ -7,7 +7,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/auction");
 const itemSeed = [
   // Home and garden
   {
-    image: "/images/home1.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/0/08/LGwashingmachine.jpg",
     itemname: "Laundry Machine",
     startingbid: 200,
     buyout: 500,
@@ -15,7 +16,8 @@ const itemSeed = [
     condition: "Good",
   },
   {
-    image: "/images/home2.jpg",
+    image:
+      "https://www.conns.com/media/catalog/product/cache/7b759865e72d36d47f7c757091c35744/m/o/morris_massage_chr.jpg",
     itemname: "Massage Chair",
     startingbid: 500,
     buyout: 1500,
@@ -23,7 +25,8 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/home3.jpg",
+    image:
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6313/6313228_sd.jpg;maxHeight=640;maxWidth=550",
     itemname: "Gas Stove",
     startingbid: 800,
     buyout: 2000,
@@ -31,7 +34,8 @@ const itemSeed = [
     condition: "Good",
   },
   {
-    image: "/images/home4.jpg",
+    image:
+      "https://www.breville.com/content/dam/breville/us/assets/espresso/finished-goods/bes980/bes980xl/images/pdp0.jpg",
     itemname: "Coffee Machine",
     startingbid: 300,
     buyout: 600,
@@ -39,48 +43,36 @@ const itemSeed = [
     condition: "Used",
   },
   {
-    image: "/images/home5.jpg",
-    itemname: "Patio Set",
-    startingbid: 40,
-    buyout: 100,
-    category: "homeAndGarden",
-    condition: "Used",
-  },
-  {
-    image: "/images/home6.jpg",
-    itemname: "Lawn Machine",
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/7178LqeItIL._AC_SL1500_.jpg",
+    itemname: "Lawn Mower",
     startingbid: 600,
     buyout: 1000,
     category: "homeAndGarden",
     condition: "Good",
   },
   {
-    image: "/images/home7.jpg",
+    image:
+      "https://secure.img1-fg.wfcdn.com/im/72650748/resize-h600-w600%5Ecompr-r85/6602/66025707/Small+Sofas+%26+Loveseats.jpg",
     itemname: "Couch",
     startingbid: 100,
     buyout: 250,
     category: "homeAndGarden",
     condition: "Used",
   },
-  {
-    image: "/images/home8.jpg",
-    itemname: "Dining Set",
-    startingbid: 50,
-    buyout: 120,
-    category: "homeAndGarden",
-    condition: "Used",
-  },
   // Electronics
   {
-    image: "/images/electronics1.jpg",
-    itemname: "iPhone 10",
+    image:
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1604021663000",
+    itemname: "iPhone 12",
     startingbid: 300,
     buyout: 650,
     category: "electronics",
     condition: "Used",
   },
   {
-    image: "/images/electronics2.jpg",
+    image:
+      "https://static.bhphoto.com/images/images2500x2500/1560437222_1482504.jpg",
     itemname: "Lenovo Laptop",
     startingbid: 500,
     buyout: 1100,
@@ -88,23 +80,15 @@ const itemSeed = [
     condition: "Good",
   },
   {
-    image: "/images/electronics3.jpg",
-    itemname: "Apple Tablet",
+    image: "https://www.adorama.com/images/Large/acmu0y2lla_4.jpg",
+    itemname: "Apple iPad",
     startingbid: 150,
     buyout: 400,
     category: "electronics",
     condition: "Used",
   },
   {
-    image: "/images/electronics4.jpg",
-    itemname: "LG Smart TV",
-    startingbid: 550,
-    buyout: 1000,
-    category: "electronics",
-    condition: "New",
-  },
-  {
-    image: "/images/electronics5.jpg",
+    image: "https://audioengineusa.com/wp-content/uploads/2018/02/black1-1.png",
     itemname: "Speakers",
     startingbid: 30,
     buyout: 75,
@@ -112,23 +96,26 @@ const itemSeed = [
     condition: "Bad",
   },
   {
-    image: "/images/electronics6.jpg",
-    itemname: "Robotic Vacuum",
+    image:
+      "https://cdn.vox-cdn.com/thumbor/8jV10mdym-UDXEnrVmpSbYpyRu4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13147673/dseifert_180924_2969_0039.jpg",
+    itemname: "Roomba Vacuum",
     startingbid: 600,
     buyout: 1100,
     category: "electronics",
     condition: "New",
   },
   {
-    image: "/images/electronics7.jpg",
-    itemname: "Vacuum Cleaner",
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/81e7BUyWTxL._AC_SL1500_.jpg",
+    itemname: "Dyson Vacuum",
     startingbid: 85,
     buyout: 250,
     category: "electronics",
     condition: "Used",
   },
   {
-    image: "/images/electronics8.jpg",
+    image:
+      "https://www.breville.com/content/dam/breville/us/assets/blenders/finished-goods/bbl920/bbl920bss1bus1/images/pdp0.jpg",
     itemname: "Blender",
     startingbid: 30,
     buyout: 90,
@@ -137,39 +124,34 @@ const itemSeed = [
   },
   // Fashion
   {
-    image: "/images/fashion1.jpg",
-    itemname: "Movado Women's Watch",
+    image: "https://i.ebayimg.com/images/g/cDYAAOSwmU9ePBGF/s-l640.jpg",
+    itemname: "Movado Watch",
     startingbid: 50,
     buyout: 125,
     category: "fashion",
     condition: "New",
   },
   {
-    image: "/images/fashion2.jpg",
-    itemname: "Women's Ring",
-    startingbid: 600,
-    buyout: 1250,
-    category: "fashion",
-    condition: "Used",
-  },
-  {
-    image: "/images/fashion3.jpg",
-    itemname: "Burberry Women's Scarf",
+    image:
+      "https://assets.burberry.com/is/image/Burberryltd/4de5bba6b0a7f694e4da34ceb666a79695d7ff84.jpg?$BBY_V2_SL_1x1$&wid=2800&hei=2800",
+    itemname: "Burberry Scarf",
     startingbid: 160,
     buyout: 275,
     category: "fashion",
     condition: "New",
   },
   {
-    image: "/images/fashion4.jpg",
-    itemname: "Gucci Women's Bag",
+    image:
+      "https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1535124604/550154_0OLET_1000_001_063_0000_Light.jpg",
+    itemname: "Gucci Bag",
     startingbid: 800,
     buyout: 1400,
     category: "fashion",
     condition: "New",
   },
   {
-    image: "/images/fashion5.jpg",
+    image:
+      "https://cdni.llbean.net/is/image/wim/284397_2772_41?hei=1095&wid=950&resMode=sharp2&defaultImage=llbstage/A0211793_2",
     itemname: "Women's Coat",
     startingbid: 80,
     buyout: 190,
@@ -177,32 +159,17 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/fashion6.jpg",
-    itemname: "Men's Bracelet",
-    startingbid: 300,
-    buyout: 500,
-    category: "fashion",
-    condition: "Used",
-  },
-  {
-    image: "/images/fashion7.jpg",
-    itemname: "Men's Bag",
+    image: "https://miro.medium.com/max/1838/1*nvO0aZ1VXTxMpp8YxmPx3Q.jpeg",
+    itemname: "Backpack",
     startingbid: 180,
     buyout: 260,
     category: "fashion",
     condition: "New",
   },
-  {
-    image: "/images/fashion8.jpg",
-    itemname: "Men's Coat",
-    startingbid: 60,
-    buyout: 140,
-    category: "fashion",
-    condition: "Good",
-  },
   // Sporting goods
   {
-    image: "/images/sport1.jpg",
+    image:
+      "https://techcrunch.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-13-at-11.19.07-AM.jpg?w=730&crop=1",
     itemname: "Bicycle",
     startingbid: 1500,
     buyout: 2500,
@@ -210,7 +177,7 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/sport2.jpg",
+    image: "https://m.media-amazon.com/images/I/5115SW8FP3L._AC_.jpg",
     itemname: "Boxing Gloves",
     startingbid: 40,
     buyout: 95,
@@ -218,15 +185,17 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/sport3.jpg",
-    itemname: "American Football",
+    image:
+      "https://www.gannett-cdn.com/presto/2020/07/18/PCHH/af400e36-18f0-45ca-aabe-bf28ca39ae01-635787293743493871-453653643.jpg?width=534&height=401&fit=crop&format=pjpg&auto=webp",
+    itemname: "Football",
     startingbid: 30,
     buyout: 80,
     category: "sportingGoods",
     condition: "New",
   },
   {
-    image: "/images/sport4.jpg",
+    image:
+      "https://images.evo.com/imgp/700/181278/741564/burton-custom-snowboard-2021-.jpg",
     itemname: "Snowboard",
     startingbid: 200,
     buyout: 450,
@@ -234,7 +203,7 @@ const itemSeed = [
     condition: "Good",
   },
   {
-    image: "/images/sport5.jpg",
+    image: "https://i.ebayimg.com/images/g/yhQAAOSw-FpeZUuO/s-l300.jpg",
     itemname: "Sports Bag",
     startingbid: 60,
     buyout: 115,
@@ -242,7 +211,8 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/sport6.jpg",
+    image:
+      "https://shop.wilson.com/media/catalog/product/cache/38/image/9df78eab33525d08d6e5fb8d27136e95/c/1/c19e6fb453f93430401197b6625ddfdf4b4a3bca_WGGC67000_2019_Profile_SGi_Mens_StandBag.jpg",
     itemname: "Golf Set",
     startingbid: 200,
     buyout: 450,
@@ -250,15 +220,8 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/sport7.jpg",
-    itemname: "Ski Suit",
-    startingbid: 80,
-    buyout: 150,
-    category: "sportingGoods",
-    condition: "Good",
-  },
-  {
-    image: "/images/sport8.jpg",
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/51O%2BxzHku-L._AC_UX569_.jpg",
     itemname: "Sports Glasses",
     startingbid: 60,
     buyout: 200,
@@ -267,7 +230,8 @@ const itemSeed = [
   },
   // businessIndustrial
   {
-    image: "/images/business1.jpg",
+    image:
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6290/6290017cv13d.jpg",
     itemname: "Printer",
     startingbid: 80,
     buyout: 200,
@@ -275,7 +239,8 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/business2.jpg",
+    image:
+      "https://ak1.ostkcdn.com/images/products/12556250/Modern-Designs-Grey-MDF-Multifunctional-Office-Desk-With-File-Cabinet-b906367d-5257-42a1-b3eb-e7176c637106_600.jpg?impolicy=medium",
     itemname: "Office Desk",
     startingbid: 150,
     buyout: 300,
@@ -283,15 +248,8 @@ const itemSeed = [
     condition: "Good",
   },
   {
-    image: "/images/business3.jpg",
-    itemname: "Cubicle",
-    startingbid: 400,
-    buyout: 950,
-    category: "businessIndustrial",
-    condition: "Good",
-  },
-  {
-    image: "/images/business4.jpg",
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/51C0CnN09rL._AC_SY355_.jpg",
     itemname: "Cash Register",
     startingbid: 2000,
     buyout: 3000,
@@ -299,32 +257,18 @@ const itemSeed = [
     condition: "New",
   },
   {
-    image: "/images/business5.jpg",
-    itemname: "Safe",
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/91Y2HXJCR8L._AC_SX522_.jpg",
+    itemname: "Money Safe",
     startingbid: 1300,
     buyout: 1800,
     category: "businessIndustrial",
     condition: "Good",
   },
   {
-    image: "/images/business6.jpg",
-    itemname: "Fingerprint Scanner",
-    startingbid: 1200,
-    buyout: 2500,
-    category: "businessIndustrial",
-    condition: "New",
-  },
-  {
-    image: "/images/business7.jpg",
-    itemname: "Payment Machine",
-    startingbid: 900,
-    buyout: 1600,
-    category: "businessIndustrial",
-    condition: "New",
-  },
-  {
-    image: "/images/business8.jpg",
-    itemname: "Shredder",
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_b39259f9-9117-4dd4-b211-6ea0a3921d4c?wid=488&hei=488&fmt=pjpeg",
+    itemname: "Paper Shredder",
     startingbid: 400,
     buyout: 600,
     category: "businessIndustrial",
