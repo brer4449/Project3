@@ -1,5 +1,6 @@
+require("dotenv").config();
 const express = require("express");
-const fileUpload = require("express-fileupload");
+// const fileUpload = require("express-fileupload");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
